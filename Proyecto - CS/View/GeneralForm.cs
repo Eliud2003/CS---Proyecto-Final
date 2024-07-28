@@ -70,7 +70,6 @@ namespace Proyecto___CS.View
         private void btnVehicle_Click(object sender, EventArgs e)
         {
             OpenForm(new MainMenu());
-
         }
     }
 }

@@ -91,11 +91,11 @@
             // 
             // btnRegisterVehicle
             // 
-            btnRegisterVehicle.Image = Properties.Resources.Save;
+            btnRegisterVehicle.Image = Properties.Resources.save;
             btnRegisterVehicle.Location = new Point(56, 363);
             btnRegisterVehicle.Margin = new Padding(4, 5, 4, 5);
             btnRegisterVehicle.Name = "btnRegisterVehicle";
-            btnRegisterVehicle.Size = new Size(140, 65);
+            btnRegisterVehicle.Size = new Size(140, 80);
             btnRegisterVehicle.TabIndex = 5;
             btnRegisterVehicle.UseVisualStyleBackColor = true;
             btnRegisterVehicle.Click += btnRegisterVehicle_Click;
@@ -148,32 +148,32 @@
             // btnUpdate
             // 
             btnUpdate.Image = Properties.Resources.Update;
-            btnUpdate.Location = new Point(233, 364);
+            btnUpdate.Location = new Point(232, 363);
             btnUpdate.Margin = new Padding(4, 5, 4, 5);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(140, 64);
+            btnUpdate.Size = new Size(140, 80);
             btnUpdate.TabIndex = 11;
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Image = Properties.Resources.Delete;
-            btnDelete.Location = new Point(56, 438);
+            btnDelete.Image = Properties.Resources.delete;
+            btnDelete.Location = new Point(56, 465);
             btnDelete.Margin = new Padding(4, 5, 4, 5);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(140, 64);
+            btnDelete.Size = new Size(140, 79);
             btnDelete.TabIndex = 12;
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
             // btnView
             // 
-            btnView.Image = Properties.Resources.View;
-            btnView.Location = new Point(233, 438);
+            btnView.Image = Properties.Resources.view;
+            btnView.Location = new Point(232, 465);
             btnView.Margin = new Padding(4, 5, 4, 5);
             btnView.Name = "btnView";
-            btnView.Size = new Size(140, 64);
+            btnView.Size = new Size(140, 79);
             btnView.TabIndex = 13;
             btnView.UseVisualStyleBackColor = true;
             btnView.Click += btnView_Click;
@@ -185,13 +185,13 @@
             dgvVehicle.Location = new Point(403, 65);
             dgvVehicle.Name = "dgvVehicle";
             dgvVehicle.RowHeadersWidth = 62;
-            dgvVehicle.Size = new Size(604, 437);
+            dgvVehicle.Size = new Size(604, 479);
             dgvVehicle.TabIndex = 14;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(677, 46);
+            label1.Location = new Point(681, 37);
             label1.Name = "label1";
             label1.Size = new Size(66, 25);
             label1.TabIndex = 15;

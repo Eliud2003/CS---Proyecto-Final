@@ -202,7 +202,7 @@
             btnRoute.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnRoute.FlatStyle = FlatStyle.Flat;
             btnRoute.ForeColor = SystemColors.ButtonFace;
-            btnRoute.Image = Properties.Resources.travel;
+            btnRoute.Image = Properties.Resources.Route;
             btnRoute.ImageAlign = ContentAlignment.MiddleLeft;
             btnRoute.Location = new Point(12, 440);
             btnRoute.Name = "btnRoute";
@@ -225,7 +225,7 @@
             btnDriver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnDriver.FlatStyle = FlatStyle.Flat;
             btnDriver.ForeColor = SystemColors.ButtonFace;
-            btnDriver.Image = Properties.Resources.Volante;
+            btnDriver.Image = Properties.Resources.Driver;
             btnDriver.ImageAlign = ContentAlignment.MiddleLeft;
             btnDriver.Location = new Point(12, 357);
             btnDriver.Name = "btnDriver";
@@ -248,8 +248,8 @@
             btnVehicle.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnVehicle.FlatStyle = FlatStyle.Flat;
             btnVehicle.ForeColor = SystemColors.ButtonFace;
-            btnVehicle.Image = Properties.Resources.vehiculo;
-            btnVehicle.ImageAlign = ContentAlignment.TopLeft;
+            btnVehicle.Image = Properties.Resources.Vehicle;
+            btnVehicle.ImageAlign = ContentAlignment.MiddleLeft;
             btnVehicle.Location = new Point(12, 274);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(205, 77);

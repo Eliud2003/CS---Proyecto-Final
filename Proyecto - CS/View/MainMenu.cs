@@ -16,10 +16,7 @@ namespace Proyecto___CS.View
     {
         private readonly VehicleController _vehicleController;
 
-        public MainMenu()
-        {
-            InitializeComponent();
-        }
+
         public MainMenu(VehicleController vehicleController)
         {
             _vehicleController = vehicleController;
