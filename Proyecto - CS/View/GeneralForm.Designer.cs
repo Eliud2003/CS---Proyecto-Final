@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralForm));
             pnlTitle = new Panel();
+            lblRol = new Label();
             btnRestore = new PictureBox();
             btnMinimize = new PictureBox();
             btnMaximize = new PictureBox();
             btnClose = new PictureBox();
             pnlVerticalMenu = new Panel();
+            lblLogo = new Label();
             panel4 = new Panel();
             btnExit = new Button();
             panel3 = new Panel();
@@ -45,8 +47,6 @@
             btnVehicle = new Button();
             pbLogo = new PictureBox();
             pnlContent = new Panel();
-            lblRol = new Label();
-            lblLogo = new Label();
             pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestore).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
@@ -70,6 +70,16 @@
             pnlTitle.Size = new Size(1300, 38);
             pnlTitle.TabIndex = 0;
             pnlTitle.MouseDown += panelTitulo_MouseDown;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.ForeColor = SystemColors.Control;
+            lblRol.Location = new Point(12, 7);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(228, 25);
+            lblRol.TabIndex = 4;
+            lblRol.Text = "ADMIN - CAMIONCITO S.A";
             // 
             // btnRestore
             // 
@@ -96,7 +106,6 @@
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
-            btnMinimize.Visible = false;
             btnMinimize.Click += btnMinimizar_Click;
             // 
             // btnMaximize
@@ -143,6 +152,17 @@
             pnlVerticalMenu.Name = "pnlVerticalMenu";
             pnlVerticalMenu.Size = new Size(220, 612);
             pnlVerticalMenu.TabIndex = 1;
+            // 
+            // lblLogo
+            // 
+            lblLogo.AutoSize = true;
+            lblLogo.BorderStyle = BorderStyle.FixedSingle;
+            lblLogo.ForeColor = SystemColors.Control;
+            lblLogo.Location = new Point(34, 178);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new Size(154, 27);
+            lblLogo.TabIndex = 5;
+            lblLogo.Text = "CAMIONCITO S.A";
             // 
             // panel4
             // 
@@ -228,7 +248,7 @@
             btnVehicle.FlatStyle = FlatStyle.Flat;
             btnVehicle.ForeColor = SystemColors.ButtonFace;
             btnVehicle.Image = Properties.Resources.vehiculo;
-            btnVehicle.ImageAlign = ContentAlignment.TopLeft;
+            btnVehicle.ImageAlign = ContentAlignment.MiddleLeft;
             btnVehicle.Location = new Point(12, 274);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(205, 77);
@@ -254,27 +274,6 @@
             pnlContent.Name = "pnlContent";
             pnlContent.Size = new Size(1080, 612);
             pnlContent.TabIndex = 2;
-            // 
-            // lblRol
-            // 
-            lblRol.AutoSize = true;
-            lblRol.ForeColor = SystemColors.Control;
-            lblRol.Location = new Point(12, 7);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(228, 25);
-            lblRol.TabIndex = 4;
-            lblRol.Text = "ADMIN - CAMIONCITO S.A";
-            // 
-            // lblLogo
-            // 
-            lblLogo.AutoSize = true;
-            lblLogo.BorderStyle = BorderStyle.FixedSingle;
-            lblLogo.ForeColor = SystemColors.Control;
-            lblLogo.Location = new Point(34, 178);
-            lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(154, 27);
-            lblLogo.TabIndex = 5;
-            lblLogo.Text = "CAMIONCITO S.A";
             // 
             // GeneralForm
             // 
