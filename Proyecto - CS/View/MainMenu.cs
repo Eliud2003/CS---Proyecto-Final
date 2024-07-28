@@ -15,6 +15,11 @@ namespace Proyecto___CS.View
     public partial class MainMenu : Form
     {
         private readonly VehicleController _vehicleController;
+
+        public MainMenu()
+        {
+            InitializeComponent();
+        }
         public MainMenu(VehicleController vehicleController)
         {
             _vehicleController = vehicleController;
