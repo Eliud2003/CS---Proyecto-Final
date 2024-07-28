@@ -40,6 +40,7 @@
             label2 = new Label();
             label3 = new Label();
             lblManufacturingDate = new Label();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // txtPlate
@@ -47,7 +48,7 @@
             txtPlate.Location = new Point(189, 44);
             txtPlate.Margin = new Padding(4, 5, 4, 5);
             txtPlate.Name = "txtPlate";
-            txtPlate.Size = new Size(141, 31);
+            txtPlate.Size = new Size(220, 31);
             txtPlate.TabIndex = 0;
             // 
             // txtModel
@@ -55,7 +56,7 @@
             txtModel.Location = new Point(189, 100);
             txtModel.Margin = new Padding(4, 5, 4, 5);
             txtModel.Name = "txtModel";
-            txtModel.Size = new Size(141, 31);
+            txtModel.Size = new Size(220, 31);
             txtModel.TabIndex = 1;
             // 
             // txtMileage
@@ -63,7 +64,7 @@
             txtMileage.Location = new Point(189, 155);
             txtMileage.Margin = new Padding(4, 5, 4, 5);
             txtMileage.Name = "txtMileage";
-            txtMileage.Size = new Size(141, 31);
+            txtMileage.Size = new Size(220, 31);
             txtMileage.TabIndex = 2;
             // 
             // txtFuelConsumption
@@ -71,13 +72,13 @@
             txtFuelConsumption.Location = new Point(189, 208);
             txtFuelConsumption.Margin = new Padding(4, 5, 4, 5);
             txtFuelConsumption.Name = "txtFuelConsumption";
-            txtFuelConsumption.Size = new Size(141, 31);
+            txtFuelConsumption.Size = new Size(220, 31);
             txtFuelConsumption.TabIndex = 3;
             // 
             // dtpManufacturingDate
             // 
             dtpManufacturingDate.CustomFormat = "dd-MM-yyyy";
-            dtpManufacturingDate.Location = new Point(189, 266);
+            dtpManufacturingDate.Location = new Point(268, 267);
             dtpManufacturingDate.Margin = new Padding(4, 5, 4, 5);
             dtpManufacturingDate.Name = "dtpManufacturingDate";
             dtpManufacturingDate.Size = new Size(141, 31);
@@ -85,12 +86,12 @@
             // 
             // btnRegisterVehicle
             // 
-            btnRegisterVehicle.Location = new Point(626, 265);
+            btnRegisterVehicle.Image = Properties.Resources.Save;
+            btnRegisterVehicle.Location = new Point(92, 324);
             btnRegisterVehicle.Margin = new Padding(4, 5, 4, 5);
             btnRegisterVehicle.Name = "btnRegisterVehicle";
-            btnRegisterVehicle.Size = new Size(149, 38);
+            btnRegisterVehicle.Size = new Size(69, 65);
             btnRegisterVehicle.TabIndex = 5;
-            btnRegisterVehicle.Text = "Register Vehicle";
             btnRegisterVehicle.UseVisualStyleBackColor = true;
             btnRegisterVehicle.Click += btnRegisterVehicle_Click;
             // 
@@ -135,15 +136,26 @@
             lblManufacturingDate.AutoSize = true;
             lblManufacturingDate.Location = new Point(92, 272);
             lblManufacturingDate.Name = "lblManufacturingDate";
-            lblManufacturingDate.Size = new Size(50, 25);
+            lblManufacturingDate.Size = new Size(169, 25);
             lblManufacturingDate.TabIndex = 10;
-            lblManufacturingDate.Text = "Plate";
+            lblManufacturingDate.Text = "Manufacturing Date";
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Image = Properties.Resources.Update;
+            btnUpdate.Location = new Point(189, 324);
+            btnUpdate.Margin = new Padding(4, 5, 4, 5);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(69, 64);
+            btnUpdate.TabIndex = 11;
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 556);
+            Controls.Add(btnUpdate);
             Controls.Add(lblManufacturingDate);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -178,5 +190,6 @@
         private Label label2;
         private Label label3;
         private Label lblManufacturingDate;
+        private Button btnUpdate;
     }
 }
