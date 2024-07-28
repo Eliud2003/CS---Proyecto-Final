@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using Microsoft.Extensions.DependencyInjection;
 using Proyecto___CS.Controller;
 using Proyecto___CS.View;
 
@@ -6,10 +7,12 @@ namespace Proyecto___CS.View
 {
     public partial class GeneralForm : Form
     {
+        private readonly VehicleController vehicleController;
         public GeneralForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.serviceProvider = serviceProvider;
         }
         //Para Poder Arrastra El Frame
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -70,7 +73,7 @@ namespace Proyecto___CS.View
 
         private void btnVehicle_Click(object sender, EventArgs e)
         {
-            OpenForm(new MainMenu());
+            OpenForm<MainMenu>();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Proyecto___CS.View
             InitializeComponent();
         }
 
+
         private void MainMenu_Load(object sender, EventArgs e)
         {
 
