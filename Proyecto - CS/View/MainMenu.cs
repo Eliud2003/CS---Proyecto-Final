@@ -26,6 +26,20 @@ namespace Proyecto___CS.View
 
         }
 
+        private void Load_Vehicle() 
+        {
+            try
+            {
+                dgvVehicle.DataSource = _vehicleController.GetAllVehicles();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void btnRegisterVehicle_Click(object sender, EventArgs e)
         {
             // Obtener los datos de los controles del formulario
@@ -62,6 +76,21 @@ namespace Proyecto___CS.View
             {
                 MessageBox.Show("Error al guardar el vehículo. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //_vehicleController.RemoveVehicle();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            Load_Vehicle();
         }
     }
 }
