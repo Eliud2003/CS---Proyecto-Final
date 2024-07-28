@@ -259,9 +259,9 @@
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.Logo;
-            pbLogo.Location = new Point(0, -38);
+            pbLogo.Location = new Point(12, -31);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(220, 267);
+            pbLogo.Size = new Size(199, 260);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
