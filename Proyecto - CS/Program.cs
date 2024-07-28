@@ -34,8 +34,8 @@ namespace Proyecto___CS
                 var services = scope.ServiceProvider;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                var mainForm = services.GetRequiredService<GeneralForm>();
-                Application.Run(mainForm);
+                var generalForm = services.GetRequiredService<GeneralForm>();
+                Application.Run(generalForm);
             }
         }
 
@@ -66,6 +66,7 @@ namespace Proyecto___CS
                     // Registrar formularios
                     services.AddTransient<MainMenu>();
                     services.AddTransient<DriverForm>();
+                    services.AddTransient<GeneralForm>();
                 });
     }
 }
