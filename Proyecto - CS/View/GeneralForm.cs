@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using Proyecto___CS.View;
 
 namespace Proyecto___CS.View
 {
@@ -7,12 +8,29 @@ namespace Proyecto___CS.View
         public GeneralForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         //Para Poder Arrastra El Frame
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        public void OpenForm(object formhija)
+        {
+            if (this.pnlContent.Controls.Count > 0)
+                this.pnlContent.Controls.RemoveAt(0);
+            Form? fh = formhija as Form;
+            #pragma warning disable CS8602 // Desreferencia de una referencia posiblemente NULL.
+            fh.TopLevel = false;
+            #pragma warning restore CS8602 // Desreferencia de una referencia posiblemente NULL.
+            fh.Dock = DockStyle.Fill;
+            this.pnlContent.Controls.Add(fh);
+            this.pnlContent.Tag = fh;
+            fh.Update();
+            fh.Show();
+
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -47,6 +65,12 @@ namespace Proyecto___CS.View
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVehicle_Click(object sender, EventArgs e)
+        {
+            OpenForm(new MainMenu());
+
         }
     }
 }

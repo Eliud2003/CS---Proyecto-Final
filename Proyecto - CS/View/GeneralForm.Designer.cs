@@ -256,6 +256,7 @@
             btnVehicle.TabIndex = 1;
             btnVehicle.Text = "     Vehiculos";
             btnVehicle.UseVisualStyleBackColor = true;
+            btnVehicle.Click += btnVehicle_Click;
             // 
             // pbLogo
             // 
