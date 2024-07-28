@@ -66,8 +66,9 @@
             pnlTitle.Controls.Add(btnClose);
             pnlTitle.Dock = DockStyle.Top;
             pnlTitle.Location = new Point(0, 0);
+            pnlTitle.Margin = new Padding(2, 2, 2, 2);
             pnlTitle.Name = "pnlTitle";
-            pnlTitle.Size = new Size(1300, 38);
+            pnlTitle.Size = new Size(1040, 30);
             pnlTitle.TabIndex = 0;
             pnlTitle.MouseDown += panelTitulo_MouseDown;
             // 
@@ -75,9 +76,10 @@
             // 
             lblRol.AutoSize = true;
             lblRol.ForeColor = SystemColors.Control;
-            lblRol.Location = new Point(12, 7);
+            lblRol.Location = new Point(10, 6);
+            lblRol.Margin = new Padding(2, 0, 2, 0);
             lblRol.Name = "lblRol";
-            lblRol.Size = new Size(228, 25);
+            lblRol.Size = new Size(186, 20);
             lblRol.TabIndex = 4;
             lblRol.Text = "ADMIN - CAMIONCITO S.A";
             // 
@@ -86,9 +88,10 @@
             btnRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRestore.Cursor = Cursors.Hand;
             btnRestore.Image = Properties.Resources.res;
-            btnRestore.Location = new Point(1204, 7);
+            btnRestore.Location = new Point(963, 6);
+            btnRestore.Margin = new Padding(2, 2, 2, 2);
             btnRestore.Name = "btnRestore";
-            btnRestore.Size = new Size(25, 25);
+            btnRestore.Size = new Size(20, 20);
             btnRestore.SizeMode = PictureBoxSizeMode.StretchImage;
             btnRestore.TabIndex = 3;
             btnRestore.TabStop = false;
@@ -100,9 +103,10 @@
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.Cursor = Cursors.Hand;
             btnMinimize.Image = Properties.Resources.minimazar;
-            btnMinimize.Location = new Point(1164, 7);
+            btnMinimize.Location = new Point(931, 6);
+            btnMinimize.Margin = new Padding(2, 2, 2, 2);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(25, 25);
+            btnMinimize.Size = new Size(20, 20);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
@@ -113,9 +117,10 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.Cursor = Cursors.Hand;
             btnMaximize.Image = Properties.Resources.maxi;
-            btnMaximize.Location = new Point(1204, 7);
+            btnMaximize.Location = new Point(963, 6);
+            btnMaximize.Margin = new Padding(2, 2, 2, 2);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(25, 25);
+            btnMaximize.Size = new Size(20, 20);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMaximize.TabIndex = 1;
             btnMaximize.TabStop = false;
@@ -126,9 +131,10 @@
             btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnClose.Cursor = Cursors.Hand;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(1245, 7);
+            btnClose.Location = new Point(996, 6);
+            btnClose.Margin = new Padding(2, 2, 2, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(25, 25);
+            btnClose.Size = new Size(20, 20);
             btnClose.SizeMode = PictureBoxSizeMode.StretchImage;
             btnClose.TabIndex = 0;
             btnClose.TabStop = false;
@@ -148,9 +154,10 @@
             pnlVerticalMenu.Controls.Add(btnVehicle);
             pnlVerticalMenu.Controls.Add(pbLogo);
             pnlVerticalMenu.Dock = DockStyle.Left;
-            pnlVerticalMenu.Location = new Point(0, 38);
+            pnlVerticalMenu.Location = new Point(0, 30);
+            pnlVerticalMenu.Margin = new Padding(2, 2, 2, 2);
             pnlVerticalMenu.Name = "pnlVerticalMenu";
-            pnlVerticalMenu.Size = new Size(220, 612);
+            pnlVerticalMenu.Size = new Size(176, 490);
             pnlVerticalMenu.TabIndex = 1;
             // 
             // lblLogo
@@ -158,18 +165,20 @@
             lblLogo.AutoSize = true;
             lblLogo.BorderStyle = BorderStyle.FixedSingle;
             lblLogo.ForeColor = SystemColors.Control;
-            lblLogo.Location = new Point(34, 178);
+            lblLogo.Location = new Point(27, 142);
+            lblLogo.Margin = new Padding(2, 0, 2, 0);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(154, 27);
+            lblLogo.Size = new Size(125, 22);
             lblLogo.TabIndex = 5;
             lblLogo.Text = "CAMIONCITO S.A";
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(0, 80, 200);
-            panel4.Location = new Point(0, 523);
+            panel4.Location = new Point(0, 418);
+            panel4.Margin = new Padding(2, 2, 2, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(10, 77);
+            panel4.Size = new Size(8, 62);
             panel4.TabIndex = 8;
             // 
             // btnExit
@@ -180,9 +189,10 @@
             btnExit.ForeColor = SystemColors.ButtonFace;
             btnExit.Image = Properties.Resources.exit;
             btnExit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExit.Location = new Point(12, 523);
+            btnExit.Location = new Point(10, 418);
+            btnExit.Margin = new Padding(2, 2, 2, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(205, 77);
+            btnExit.Size = new Size(164, 62);
             btnExit.TabIndex = 7;
             btnExit.Text = "     Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -191,9 +201,10 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(0, 80, 200);
-            panel3.Location = new Point(0, 440);
+            panel3.Location = new Point(0, 352);
+            panel3.Margin = new Padding(2, 2, 2, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(10, 77);
+            panel3.Size = new Size(8, 62);
             panel3.TabIndex = 6;
             // 
             // btnRoute
@@ -204,9 +215,10 @@
             btnRoute.ForeColor = SystemColors.ButtonFace;
             btnRoute.Image = Properties.Resources.Route;
             btnRoute.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRoute.Location = new Point(12, 440);
+            btnRoute.Location = new Point(10, 352);
+            btnRoute.Margin = new Padding(2, 2, 2, 2);
             btnRoute.Name = "btnRoute";
-            btnRoute.Size = new Size(205, 77);
+            btnRoute.Size = new Size(164, 62);
             btnRoute.TabIndex = 5;
             btnRoute.Text = "     Route";
             btnRoute.UseVisualStyleBackColor = true;
@@ -214,9 +226,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 80, 200);
-            panel2.Location = new Point(0, 357);
+            panel2.Location = new Point(0, 286);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(10, 77);
+            panel2.Size = new Size(8, 62);
             panel2.TabIndex = 4;
             // 
             // btnDriver
@@ -227,19 +240,22 @@
             btnDriver.ForeColor = SystemColors.ButtonFace;
             btnDriver.Image = Properties.Resources.Driver;
             btnDriver.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDriver.Location = new Point(12, 357);
+            btnDriver.Location = new Point(10, 286);
+            btnDriver.Margin = new Padding(2, 2, 2, 2);
             btnDriver.Name = "btnDriver";
-            btnDriver.Size = new Size(205, 77);
+            btnDriver.Size = new Size(164, 62);
             btnDriver.TabIndex = 3;
             btnDriver.Text = "     Driver";
             btnDriver.UseVisualStyleBackColor = true;
+            btnDriver.Click += btnDriver_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(0, 274);
+            panel1.Location = new Point(0, 219);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(10, 77);
+            panel1.Size = new Size(8, 62);
             panel1.TabIndex = 2;
             // 
             // btnVehicle
@@ -250,9 +266,10 @@
             btnVehicle.ForeColor = SystemColors.ButtonFace;
             btnVehicle.Image = Properties.Resources.Vehicle;
             btnVehicle.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVehicle.Location = new Point(12, 274);
+            btnVehicle.Location = new Point(10, 219);
+            btnVehicle.Margin = new Padding(2, 2, 2, 2);
             btnVehicle.Name = "btnVehicle";
-            btnVehicle.Size = new Size(205, 77);
+            btnVehicle.Size = new Size(164, 62);
             btnVehicle.TabIndex = 1;
             btnVehicle.Text = "     Vehiculos";
             btnVehicle.UseVisualStyleBackColor = true;
@@ -261,9 +278,10 @@
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.Logo;
-            pbLogo.Location = new Point(12, -31);
+            pbLogo.Location = new Point(10, -25);
+            pbLogo.Margin = new Padding(2, 2, 2, 2);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(199, 260);
+            pbLogo.Size = new Size(159, 208);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
@@ -272,21 +290,23 @@
             // 
             pnlContent.BackColor = Color.FromArgb(49, 66, 82);
             pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(220, 38);
+            pnlContent.Location = new Point(176, 30);
+            pnlContent.Margin = new Padding(2, 2, 2, 2);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(1080, 612);
+            pnlContent.Size = new Size(864, 490);
             pnlContent.TabIndex = 2;
             // 
             // GeneralForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 650);
+            ClientSize = new Size(1040, 520);
             Controls.Add(pnlContent);
             Controls.Add(pnlVerticalMenu);
             Controls.Add(pnlTitle);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             Name = "GeneralForm";
             Text = "GeneralForm";
             pnlTitle.ResumeLayout(false);

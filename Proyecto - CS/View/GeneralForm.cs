@@ -1,41 +1,40 @@
 ﻿using System.Runtime.InteropServices;
-using Microsoft.Extensions.DependencyInjection;
 using Proyecto___CS.Controller;
 using Proyecto___CS.View;
-using static System.Formats.Asn1.AsnWriter;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Proyecto___CS.View
 {
     public partial class GeneralForm : Form
     {
         private readonly VehicleController vehicleController;
-        public GeneralForm()
+        private readonly IServiceProvider serviceProvider;
+
+        public GeneralForm(IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.serviceProvider = serviceProvider;
         }
-        //Para Poder Arrastra El Frame
+
+        // Para Poder Arrastrar El Frame
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        public void OpenForm(object formhija)
+        public void OpenForm<TForm>() where TForm : Form
         {
-
             if (this.pnlContent.Controls.Count > 0)
                 this.pnlContent.Controls.RemoveAt(0);
-            Form? fh = formhija as Form;
-            #pragma warning disable CS8602 // Desreferencia de una referencia posiblemente NULL.
-            fh.TopLevel = false;
-            #pragma warning restore CS8602 // Desreferencia de una referencia posiblemente NULL.
-            fh.Dock = DockStyle.Fill;
-            this.pnlContent.Controls.Add(fh);
-            this.pnlContent.Tag = fh;
-            fh.Update();
-            fh.Show();
 
+            Form form = serviceProvider.GetRequiredService<TForm>();
+
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            this.pnlContent.Controls.Add(form);
+            this.pnlContent.Tag = form;
+            form.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -76,6 +75,11 @@ namespace Proyecto___CS.View
         private void btnVehicle_Click(object sender, EventArgs e)
         {
             OpenForm<MainMenu>();
+        }
+
+        private void btnDriver_Click(object sender, EventArgs e)
+        {
+            OpenForm<DriverForm>();
         }
     }
 }
