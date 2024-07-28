@@ -29,108 +29,212 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralForm));
-            panelTitulo = new Panel();
-            btnRestaurar = new PictureBox();
-            btnMinimizar = new PictureBox();
-            btnMaximizar = new PictureBox();
-            btnCerrar = new PictureBox();
-            panelMenuVertical = new Panel();
-            panelContenedor = new Panel();
+            pnlTitle = new Panel();
+            btnRestore = new PictureBox();
+            btnMinimize = new PictureBox();
+            btnMaximize = new PictureBox();
+            btnClose = new PictureBox();
+            pnlVerticalMenu = new Panel();
+            panel4 = new Panel();
+            btnExit = new Button();
+            panel3 = new Panel();
+            btnRoute = new Button();
+            panel2 = new Panel();
+            btnDriver = new Button();
+            panel1 = new Panel();
+            btnVehicle = new Button();
             pbLogo = new PictureBox();
-            panelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
-            panelMenuVertical.SuspendLayout();
+            pnlContent = new Panel();
+            lblRol = new Label();
+            lblLogo = new Label();
+            pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRestore).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
+            pnlVerticalMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
-            // panelTitulo
+            // pnlTitle
             // 
-            panelTitulo.BackColor = Color.FromArgb(0, 80, 200);
-            panelTitulo.Controls.Add(btnRestaurar);
-            panelTitulo.Controls.Add(btnMinimizar);
-            panelTitulo.Controls.Add(btnMaximizar);
-            panelTitulo.Controls.Add(btnCerrar);
-            panelTitulo.Dock = DockStyle.Top;
-            panelTitulo.Location = new Point(0, 0);
-            panelTitulo.Name = "panelTitulo";
-            panelTitulo.Size = new Size(1300, 38);
-            panelTitulo.TabIndex = 0;
-            panelTitulo.MouseDown += panelTitulo_MouseDown;
+            pnlTitle.BackColor = Color.FromArgb(0, 80, 200);
+            pnlTitle.Controls.Add(lblRol);
+            pnlTitle.Controls.Add(btnRestore);
+            pnlTitle.Controls.Add(btnMinimize);
+            pnlTitle.Controls.Add(btnMaximize);
+            pnlTitle.Controls.Add(btnClose);
+            pnlTitle.Dock = DockStyle.Top;
+            pnlTitle.Location = new Point(0, 0);
+            pnlTitle.Name = "pnlTitle";
+            pnlTitle.Size = new Size(1300, 38);
+            pnlTitle.TabIndex = 0;
+            pnlTitle.MouseDown += panelTitulo_MouseDown;
             // 
-            // btnRestaurar
+            // btnRestore
             // 
-            btnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRestaurar.Cursor = Cursors.Hand;
-            btnRestaurar.Image = Properties.Resources.res;
-            btnRestaurar.Location = new Point(1152, 7);
-            btnRestaurar.Name = "btnRestaurar";
-            btnRestaurar.Size = new Size(25, 25);
-            btnRestaurar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnRestaurar.TabIndex = 3;
-            btnRestaurar.TabStop = false;
-            btnRestaurar.Click += bntRestaurar_Click;
+            btnRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRestore.Cursor = Cursors.Hand;
+            btnRestore.Image = Properties.Resources.res;
+            btnRestore.Location = new Point(1204, 7);
+            btnRestore.Name = "btnRestore";
+            btnRestore.Size = new Size(25, 25);
+            btnRestore.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnRestore.TabIndex = 3;
+            btnRestore.TabStop = false;
+            btnRestore.Visible = false;
+            btnRestore.Click += bntRestaurar_Click;
             // 
-            // btnMinimizar
+            // btnMinimize
             // 
-            btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimizar.Cursor = Cursors.Hand;
-            btnMinimizar.Image = Properties.Resources.minimazar;
-            btnMinimizar.Location = new Point(1183, 7);
-            btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(25, 25);
-            btnMinimizar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnMinimizar.TabIndex = 2;
-            btnMinimizar.TabStop = false;
-            btnMinimizar.Visible = false;
-            btnMinimizar.Click += btnMinimizar_Click;
+            btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMinimize.Cursor = Cursors.Hand;
+            btnMinimize.Image = Properties.Resources.minimazar;
+            btnMinimize.Location = new Point(1164, 7);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(25, 25);
+            btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMinimize.TabIndex = 2;
+            btnMinimize.TabStop = false;
+            btnMinimize.Visible = false;
+            btnMinimize.Click += btnMinimizar_Click;
             // 
-            // btnMaximizar
+            // btnMaximize
             // 
-            btnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximizar.Cursor = Cursors.Hand;
-            btnMaximizar.Image = Properties.Resources.maxi;
-            btnMaximizar.Location = new Point(1214, 7);
-            btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.Size = new Size(25, 25);
-            btnMaximizar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnMaximizar.TabIndex = 1;
-            btnMaximizar.TabStop = false;
-            btnMaximizar.Click += btnMaximizar_Click;
+            btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMaximize.Cursor = Cursors.Hand;
+            btnMaximize.Image = Properties.Resources.maxi;
+            btnMaximize.Location = new Point(1204, 7);
+            btnMaximize.Name = "btnMaximize";
+            btnMaximize.Size = new Size(25, 25);
+            btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMaximize.TabIndex = 1;
+            btnMaximize.TabStop = false;
+            btnMaximize.Click += btnMaximizar_Click;
             // 
-            // btnCerrar
+            // btnClose
             // 
-            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCerrar.Cursor = Cursors.Hand;
-            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1245, 7);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(25, 25);
-            btnCerrar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnCerrar.TabIndex = 0;
-            btnCerrar.TabStop = false;
-            btnCerrar.Click += btnCerrar_Click;
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new Point(1245, 7);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(25, 25);
+            btnClose.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnClose.TabIndex = 0;
+            btnClose.TabStop = false;
+            btnClose.Click += btnCerrar_Click;
             // 
-            // panelMenuVertical
+            // pnlVerticalMenu
             // 
-            panelMenuVertical.BackColor = Color.FromArgb(26, 32, 40);
-            panelMenuVertical.Controls.Add(pbLogo);
-            panelMenuVertical.Dock = DockStyle.Left;
-            panelMenuVertical.Location = new Point(0, 38);
-            panelMenuVertical.Name = "panelMenuVertical";
-            panelMenuVertical.Size = new Size(220, 612);
-            panelMenuVertical.TabIndex = 1;
+            pnlVerticalMenu.BackColor = Color.FromArgb(26, 32, 40);
+            pnlVerticalMenu.Controls.Add(lblLogo);
+            pnlVerticalMenu.Controls.Add(panel4);
+            pnlVerticalMenu.Controls.Add(btnExit);
+            pnlVerticalMenu.Controls.Add(panel3);
+            pnlVerticalMenu.Controls.Add(btnRoute);
+            pnlVerticalMenu.Controls.Add(panel2);
+            pnlVerticalMenu.Controls.Add(btnDriver);
+            pnlVerticalMenu.Controls.Add(panel1);
+            pnlVerticalMenu.Controls.Add(btnVehicle);
+            pnlVerticalMenu.Controls.Add(pbLogo);
+            pnlVerticalMenu.Dock = DockStyle.Left;
+            pnlVerticalMenu.Location = new Point(0, 38);
+            pnlVerticalMenu.Name = "pnlVerticalMenu";
+            pnlVerticalMenu.Size = new Size(220, 612);
+            pnlVerticalMenu.TabIndex = 1;
             // 
-            // panelContenedor
+            // panel4
             // 
-            panelContenedor.BackColor = Color.FromArgb(49, 66, 82);
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(220, 38);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1080, 612);
-            panelContenedor.TabIndex = 2;
+            panel4.BackColor = Color.FromArgb(0, 80, 200);
+            panel4.Location = new Point(0, 523);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(10, 77);
+            panel4.TabIndex = 8;
+            // 
+            // btnExit
+            // 
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.ForeColor = SystemColors.ButtonFace;
+            btnExit.Image = Properties.Resources.exit;
+            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExit.Location = new Point(12, 523);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(205, 77);
+            btnExit.TabIndex = 7;
+            btnExit.Text = "     Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(0, 80, 200);
+            panel3.Location = new Point(0, 440);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(10, 77);
+            panel3.TabIndex = 6;
+            // 
+            // btnRoute
+            // 
+            btnRoute.FlatAppearance.BorderSize = 0;
+            btnRoute.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnRoute.FlatStyle = FlatStyle.Flat;
+            btnRoute.ForeColor = SystemColors.ButtonFace;
+            btnRoute.Image = Properties.Resources.travel;
+            btnRoute.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRoute.Location = new Point(12, 440);
+            btnRoute.Name = "btnRoute";
+            btnRoute.Size = new Size(205, 77);
+            btnRoute.TabIndex = 5;
+            btnRoute.Text = "     Route";
+            btnRoute.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(0, 80, 200);
+            panel2.Location = new Point(0, 357);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(10, 77);
+            panel2.TabIndex = 4;
+            // 
+            // btnDriver
+            // 
+            btnDriver.FlatAppearance.BorderSize = 0;
+            btnDriver.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnDriver.FlatStyle = FlatStyle.Flat;
+            btnDriver.ForeColor = SystemColors.ButtonFace;
+            btnDriver.Image = Properties.Resources.Volante;
+            btnDriver.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDriver.Location = new Point(12, 357);
+            btnDriver.Name = "btnDriver";
+            btnDriver.Size = new Size(205, 77);
+            btnDriver.TabIndex = 3;
+            btnDriver.Text = "     Driver";
+            btnDriver.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 80, 200);
+            panel1.Location = new Point(0, 274);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(10, 77);
+            panel1.TabIndex = 2;
+            // 
+            // btnVehicle
+            // 
+            btnVehicle.FlatAppearance.BorderSize = 0;
+            btnVehicle.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnVehicle.FlatStyle = FlatStyle.Flat;
+            btnVehicle.ForeColor = SystemColors.ButtonFace;
+            btnVehicle.Image = Properties.Resources.vehiculo;
+            btnVehicle.ImageAlign = ContentAlignment.TopLeft;
+            btnVehicle.Location = new Point(12, 274);
+            btnVehicle.Name = "btnVehicle";
+            btnVehicle.Size = new Size(205, 77);
+            btnVehicle.TabIndex = 1;
+            btnVehicle.Text = "     Vehiculos";
+            btnVehicle.UseVisualStyleBackColor = true;
             // 
             // pbLogo
             // 
@@ -142,37 +246,79 @@
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
             // 
+            // pnlContent
+            // 
+            pnlContent.BackColor = Color.FromArgb(49, 66, 82);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(220, 38);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(1080, 612);
+            pnlContent.TabIndex = 2;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.ForeColor = SystemColors.Control;
+            lblRol.Location = new Point(12, 7);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(228, 25);
+            lblRol.TabIndex = 4;
+            lblRol.Text = "ADMIN - CAMIONCITO S.A";
+            // 
+            // lblLogo
+            // 
+            lblLogo.AutoSize = true;
+            lblLogo.BorderStyle = BorderStyle.FixedSingle;
+            lblLogo.ForeColor = SystemColors.Control;
+            lblLogo.Location = new Point(34, 178);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new Size(154, 27);
+            lblLogo.TabIndex = 5;
+            lblLogo.Text = "CAMIONCITO S.A";
+            // 
             // GeneralForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1300, 650);
-            Controls.Add(panelContenedor);
-            Controls.Add(panelMenuVertical);
-            Controls.Add(panelTitulo);
+            Controls.Add(pnlContent);
+            Controls.Add(pnlVerticalMenu);
+            Controls.Add(pnlTitle);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "GeneralForm";
             Text = "GeneralForm";
-            panelTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnRestaurar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
-            panelMenuVertical.ResumeLayout(false);
+            pnlTitle.ResumeLayout(false);
+            pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRestore).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
+            pnlVerticalMenu.ResumeLayout(false);
+            pnlVerticalMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panelTitulo;
-        private Panel panelMenuVertical;
-        private Panel panelContenedor;
-        private PictureBox btnCerrar;
-        private PictureBox btnRestaurar;
-        private PictureBox btnMinimizar;
-        private PictureBox btnMaximizar;
+        private Panel pnlTitle;
+        private Panel pnlVerticalMenu;
+        private Panel pnlContent;
+        private PictureBox btnClose;
+        private PictureBox btnRestore;
+        private PictureBox btnMinimize;
+        private PictureBox btnMaximize;
         private PictureBox pbLogo;
+        private Button btnVehicle;
+        private Panel panel1;
+        private Panel panel4;
+        private Button btnExit;
+        private Panel panel3;
+        private Button btnRoute;
+        private Panel panel2;
+        private Button btnDriver;
+        private Label lblRol;
+        private Label lblLogo;
     }
 }

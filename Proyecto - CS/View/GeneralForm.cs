@@ -22,8 +22,8 @@ namespace Proyecto___CS.View
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
+            btnMaximize.Visible = false;
+            btnRestore.Visible = true;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace Proyecto___CS.View
         private void bntRestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnMaximizar.Visible = true;
+            btnRestore.Visible = false;
+            btnMaximize.Visible = true;
         }
 
         private void panelTitulo_MouseDown(object sender, MouseEventArgs e)

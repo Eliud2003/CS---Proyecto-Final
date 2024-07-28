@@ -34,7 +34,7 @@ namespace Proyecto___CS
                 var services = scope.ServiceProvider;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                var mainForm = services.GetRequiredService<MainMenu>();
+                var mainForm = services.GetRequiredService<GeneralForm>();
                 Application.Run(mainForm);
             }
         }
