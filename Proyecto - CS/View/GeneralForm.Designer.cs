@@ -248,7 +248,7 @@
             btnVehicle.FlatStyle = FlatStyle.Flat;
             btnVehicle.ForeColor = SystemColors.ButtonFace;
             btnVehicle.Image = Properties.Resources.vehiculo;
-            btnVehicle.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVehicle.ImageAlign = ContentAlignment.TopLeft;
             btnVehicle.Location = new Point(12, 274);
             btnVehicle.Name = "btnVehicle";
             btnVehicle.Size = new Size(205, 77);
