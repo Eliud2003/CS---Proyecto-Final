@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using Proyecto___CS.Controller;
 using Proyecto___CS.View;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Proyecto___CS.View
 {
@@ -19,6 +20,7 @@ namespace Proyecto___CS.View
 
         public void OpenForm(object formhija)
         {
+
             if (this.pnlContent.Controls.Count > 0)
                 this.pnlContent.Controls.RemoveAt(0);
             Form? fh = formhija as Form;
@@ -70,7 +72,7 @@ namespace Proyecto___CS.View
 
         private void btnVehicle_Click(object sender, EventArgs e)
         {
-            OpenForm(new MainMenu());
+            //OpenForm(new MainMenu());
         }
     }
 }
