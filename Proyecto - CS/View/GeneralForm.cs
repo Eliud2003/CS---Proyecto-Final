@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Proyecto___CS.Controller;
 using Proyecto___CS.View;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Proyecto___CS.View
 {
@@ -22,6 +23,7 @@ namespace Proyecto___CS.View
 
         public void OpenForm(object formhija)
         {
+
             if (this.pnlContent.Controls.Count > 0)
                 this.pnlContent.Controls.RemoveAt(0);
             Form? fh = formhija as Form;

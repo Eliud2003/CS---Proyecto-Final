@@ -88,7 +88,31 @@ namespace Proyecto___CS.View
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //_vehicleController.RemoveVehicle();
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete this item?", "Deleted"
+                , botones, MessageBoxIcon.Exclamation);
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    //obj_chofer.IdCHF = indiceCHF;
+                    int id = 1;//falta obtener el id del datagridview
+                    if (_vehicleController.RemoveVehicle(id))
+                    {
+                        MessageBox.Show("Successfully Deleted");
+                        Load_Vehicle();
+                    }
+                    else
+                        MessageBox.Show("Could Not Delete");
+
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnView_Click(object sender, EventArgs e)
