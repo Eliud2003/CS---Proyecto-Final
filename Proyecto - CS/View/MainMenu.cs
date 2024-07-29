@@ -28,6 +28,10 @@ namespace Proyecto___CS.View
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            btnDelete.Enabled = false;
+            btnRegisterVehicle.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnView.Enabled = true;
 
         }
 
@@ -60,6 +64,8 @@ namespace Proyecto___CS.View
                 MessageBox.Show("Por favor, complete todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+                btnRegisterVehicle.Enabled=true;
 
 
 
@@ -85,7 +91,32 @@ namespace Proyecto___CS.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult dr = MessageBox.Show("Are you sure you want to update this item?", "Update"
+                , botones, MessageBoxIcon.Exclamation);
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
 
+                    if (_vehicleController.RemoveVehicle(VehicleId))
+                    {
+                        MessageBox.Show("Successfully Update");
+                        Load_Vehicle();
+                    }
+                    else
+                        MessageBox.Show("Could Not Update");
+
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                    btnView.Enabled = false;
+                    btnRegisterVehicle.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -97,7 +128,7 @@ namespace Proyecto___CS.View
             {
                 try
                 {
-                   
+
                     if (_vehicleController.RemoveVehicle(VehicleId))
                     {
                         MessageBox.Show("Successfully Deleted");
@@ -106,8 +137,11 @@ namespace Proyecto___CS.View
                     else
                         MessageBox.Show("Could Not Delete");
 
+
                     btnDelete.Enabled = false;
                     btnUpdate.Enabled = false;
+                    btnView.Enabled = false;
+                    btnRegisterVehicle.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -121,7 +155,7 @@ namespace Proyecto___CS.View
             Load_Vehicle();
         }
 
-        private void dgvVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvVehicle_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvVehicle.SelectedCells.Count > 0)
             {
@@ -135,6 +169,34 @@ namespace Proyecto___CS.View
                 txtFuelConsumption.Text = selectedRow.Cells["FuelConsumption"].Value.ToString();
                 dtpManufacturingDate.Value = Convert.ToDateTime(selectedRow.Cells["ManufacturingDate"].Value.ToString());
             }
+            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnRegisterVehicle.Enabled = false;
+            btnView.Enabled = false;
+        }
+
+        private void btnRegisterVehicle_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnRegisterVehicle, "Save");
+        }
+
+        private void btnUpdate_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnUpdate, "Update");
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnDelete, "Delete");
+        }
+
+        private void btnView_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnView, "View List");
         }
     }
 }
