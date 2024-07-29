@@ -50,6 +50,15 @@ namespace Proyecto___CS.View
             }
         }
 
+        private void CleanData()
+        {
+            txtPlate.Clear();
+            txtModel.Clear();
+            txtMileage.Clear();
+            txtFuelConsumption.Clear();
+            dtpManufacturingDate.Value = DateTime.Now;
+        }
+
         private void btnRegisterVehicle_Click(object sender, EventArgs e)
         {
             // Obtener los datos de los controles del formulario
@@ -78,11 +87,7 @@ namespace Proyecto___CS.View
             {
                 MessageBox.Show("Vehículo guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Limpiar los campos del formulario
-                txtPlate.Clear();
-                txtModel.Clear();
-                txtMileage.Clear();
-                txtFuelConsumption.Clear();
-                dtpManufacturingDate.Value = DateTime.Now;
+                CleanData();
             }
             else
             {
@@ -104,6 +109,7 @@ namespace Proyecto___CS.View
                     {
                         MessageBox.Show("Successfully Update");
                         Load_Vehicle();
+                        CleanData();
                     }
                     else
                         MessageBox.Show("Could Not Update");
@@ -134,6 +140,7 @@ namespace Proyecto___CS.View
                     {
                         MessageBox.Show("Successfully Deleted");
                         Load_Vehicle();
+                        CleanData();
                     }
                     else
                         MessageBox.Show("Could Not Delete");
