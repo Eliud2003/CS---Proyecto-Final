@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto___CS.View
 {
     public partial class MainMenu : Form
     {
         private readonly VehicleController _vehicleController;
+        private int VehicleId;
 
 
         public MainMenu(VehicleController vehicleController)
@@ -29,7 +31,7 @@ namespace Proyecto___CS.View
 
         }
 
-        private void Load_Vehicle() 
+        private void Load_Vehicle()
         {
             try
             {
@@ -96,8 +98,8 @@ namespace Proyecto___CS.View
                 try
                 {
                     //obj_chofer.IdCHF = indiceCHF;
-                    int id = 5;//falta obtener el id del datagridview
-                    if (_vehicleController.RemoveVehicle(id))
+                    VehicleId = 5;//falta obtener el id del datagridview
+                    if (_vehicleController.RemoveVehicle(VehicleId))
                     {
                         MessageBox.Show("Successfully Deleted");
                         Load_Vehicle();
@@ -118,6 +120,22 @@ namespace Proyecto___CS.View
         private void btnView_Click(object sender, EventArgs e)
         {
             Load_Vehicle();
+        }
+
+        private void dgvVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvVehicle.SelectedCells.Count > 0)
+            {
+                int SelectedRowIndex = dgvVehicle.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvVehicle.Rows[SelectedRowIndex];
+                // Take Data
+                VehicleId = Convert.ToInt16(selectedRow.Cells["VehicleId"].Value.ToString());
+                txtPlate.Text = selectedRow.Cells["Plate"].Value.ToString();
+                txtModel.Text = selectedRow.Cells["Model"].Value.ToString();
+                txtMileage.Text = selectedRow.Cells["Mileage"].Value.ToString();
+                txtFuelConsumption.Text = selectedRow.Cells["FuelConsumption"].Value.ToString();
+                dtpManufacturingDate.Value = Convert.ToDateTime(selectedRow.Cells["ManufacturingDate"].Value.ToString());
+            }
         }
     }
 }

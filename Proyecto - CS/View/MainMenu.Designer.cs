@@ -50,53 +50,53 @@
             // 
             // txtPlate
             // 
-            txtPlate.Location = new Point(122, 52);
-            txtPlate.Margin = new Padding(3, 4, 3, 4);
+            txtPlate.Location = new Point(152, 65);
+            txtPlate.Margin = new Padding(4, 5, 4, 5);
             txtPlate.Name = "txtPlate";
-            txtPlate.Size = new Size(177, 27);
+            txtPlate.Size = new Size(220, 31);
             txtPlate.TabIndex = 0;
             // 
             // txtModel
             // 
-            txtModel.Location = new Point(122, 97);
-            txtModel.Margin = new Padding(3, 4, 3, 4);
+            txtModel.Location = new Point(152, 121);
+            txtModel.Margin = new Padding(4, 5, 4, 5);
             txtModel.Name = "txtModel";
-            txtModel.Size = new Size(177, 27);
+            txtModel.Size = new Size(220, 31);
             txtModel.TabIndex = 1;
             // 
             // txtMileage
             // 
-            txtMileage.Location = new Point(122, 141);
-            txtMileage.Margin = new Padding(3, 4, 3, 4);
+            txtMileage.Location = new Point(152, 176);
+            txtMileage.Margin = new Padding(4, 5, 4, 5);
             txtMileage.Name = "txtMileage";
-            txtMileage.Size = new Size(177, 27);
+            txtMileage.Size = new Size(220, 31);
             txtMileage.TabIndex = 2;
             // 
             // txtFuelConsumption
             // 
-            txtFuelConsumption.Location = new Point(186, 183);
-            txtFuelConsumption.Margin = new Padding(3, 4, 3, 4);
+            txtFuelConsumption.Location = new Point(232, 229);
+            txtFuelConsumption.Margin = new Padding(4, 5, 4, 5);
             txtFuelConsumption.Name = "txtFuelConsumption";
-            txtFuelConsumption.Size = new Size(114, 27);
+            txtFuelConsumption.Size = new Size(142, 31);
             txtFuelConsumption.TabIndex = 3;
             // 
             // dtpManufacturingDate
             // 
             dtpManufacturingDate.CustomFormat = "dd-MM-yyyy";
-            dtpManufacturingDate.Location = new Point(186, 230);
-            dtpManufacturingDate.Margin = new Padding(3, 4, 3, 4);
+            dtpManufacturingDate.Location = new Point(232, 288);
+            dtpManufacturingDate.Margin = new Padding(4, 5, 4, 5);
             dtpManufacturingDate.Name = "dtpManufacturingDate";
-            dtpManufacturingDate.Size = new Size(114, 27);
+            dtpManufacturingDate.Size = new Size(142, 31);
             dtpManufacturingDate.TabIndex = 4;
             // 
             // btnRegisterVehicle
             // 
             btnRegisterVehicle.BackColor = Color.FromArgb(192, 255, 192);
             btnRegisterVehicle.Image = Properties.Resources.save;
-            btnRegisterVehicle.Location = new Point(45, 290);
-            btnRegisterVehicle.Margin = new Padding(3, 4, 3, 4);
+            btnRegisterVehicle.Location = new Point(56, 362);
+            btnRegisterVehicle.Margin = new Padding(4, 5, 4, 5);
             btnRegisterVehicle.Name = "btnRegisterVehicle";
-            btnRegisterVehicle.Size = new Size(112, 64);
+            btnRegisterVehicle.Size = new Size(140, 80);
             btnRegisterVehicle.TabIndex = 5;
             btnRegisterVehicle.UseVisualStyleBackColor = false;
             btnRegisterVehicle.Click += btnRegisterVehicle_Click;
@@ -104,50 +104,50 @@
             // lblPlate
             // 
             lblPlate.AutoSize = true;
-            lblPlate.Location = new Point(45, 57);
+            lblPlate.Location = new Point(56, 71);
             lblPlate.Margin = new Padding(2, 0, 2, 0);
             lblPlate.Name = "lblPlate";
-            lblPlate.Size = new Size(42, 20);
+            lblPlate.Size = new Size(50, 25);
             lblPlate.TabIndex = 6;
             lblPlate.Text = "Plate";
             // 
             // lblModel
             // 
             lblModel.AutoSize = true;
-            lblModel.Location = new Point(45, 102);
+            lblModel.Location = new Point(56, 128);
             lblModel.Margin = new Padding(2, 0, 2, 0);
             lblModel.Name = "lblModel";
-            lblModel.Size = new Size(52, 20);
+            lblModel.Size = new Size(63, 25);
             lblModel.TabIndex = 7;
             lblModel.Text = "Model";
             // 
             // lblMileage
             // 
             lblMileage.AutoSize = true;
-            lblMileage.Location = new Point(45, 146);
+            lblMileage.Location = new Point(56, 182);
             lblMileage.Margin = new Padding(2, 0, 2, 0);
             lblMileage.Name = "lblMileage";
-            lblMileage.Size = new Size(63, 20);
+            lblMileage.Size = new Size(74, 25);
             lblMileage.TabIndex = 8;
             lblMileage.Text = "Mileage";
             // 
             // lblFuelConsumption
             // 
             lblFuelConsumption.AutoSize = true;
-            lblFuelConsumption.Location = new Point(45, 188);
+            lblFuelConsumption.Location = new Point(56, 235);
             lblFuelConsumption.Margin = new Padding(2, 0, 2, 0);
             lblFuelConsumption.Name = "lblFuelConsumption";
-            lblFuelConsumption.Size = new Size(128, 20);
+            lblFuelConsumption.Size = new Size(157, 25);
             lblFuelConsumption.TabIndex = 9;
             lblFuelConsumption.Text = "Fuel Consumption";
             // 
             // lblManufacturingDate
             // 
             lblManufacturingDate.AutoSize = true;
-            lblManufacturingDate.Location = new Point(45, 234);
+            lblManufacturingDate.Location = new Point(56, 292);
             lblManufacturingDate.Margin = new Padding(2, 0, 2, 0);
             lblManufacturingDate.Name = "lblManufacturingDate";
-            lblManufacturingDate.Size = new Size(141, 20);
+            lblManufacturingDate.Size = new Size(169, 25);
             lblManufacturingDate.TabIndex = 10;
             lblManufacturingDate.Text = "Manufacturing Date";
             // 
@@ -155,10 +155,10 @@
             // 
             btnUpdate.BackColor = SystemColors.Info;
             btnUpdate.Image = Properties.Resources.Update;
-            btnUpdate.Location = new Point(186, 290);
-            btnUpdate.Margin = new Padding(3, 4, 3, 4);
+            btnUpdate.Location = new Point(232, 362);
+            btnUpdate.Margin = new Padding(4, 5, 4, 5);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(112, 64);
+            btnUpdate.Size = new Size(140, 80);
             btnUpdate.TabIndex = 11;
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
@@ -167,10 +167,10 @@
             // 
             btnDelete.BackColor = Color.FromArgb(255, 192, 192);
             btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(45, 372);
-            btnDelete.Margin = new Padding(3, 4, 3, 4);
+            btnDelete.Location = new Point(56, 465);
+            btnDelete.Margin = new Padding(4, 5, 4, 5);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(112, 63);
+            btnDelete.Size = new Size(140, 79);
             btnDelete.TabIndex = 12;
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
@@ -179,10 +179,10 @@
             // 
             btnView.BackColor = SystemColors.ButtonShadow;
             btnView.Image = Properties.Resources.view;
-            btnView.Location = new Point(186, 372);
-            btnView.Margin = new Padding(3, 4, 3, 4);
+            btnView.Location = new Point(232, 465);
+            btnView.Margin = new Padding(4, 5, 4, 5);
             btnView.Name = "btnView";
-            btnView.Size = new Size(112, 63);
+            btnView.Size = new Size(140, 79);
             btnView.TabIndex = 13;
             btnView.UseVisualStyleBackColor = false;
             btnView.Click += btnView_Click;
@@ -191,28 +191,29 @@
             // 
             dgvVehicle.BackgroundColor = SystemColors.ButtonFace;
             dgvVehicle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVehicle.Location = new Point(322, 52);
+            dgvVehicle.Location = new Point(402, 65);
             dgvVehicle.Margin = new Padding(2);
             dgvVehicle.Name = "dgvVehicle";
             dgvVehicle.RowHeadersWidth = 62;
-            dgvVehicle.Size = new Size(483, 383);
+            dgvVehicle.Size = new Size(604, 479);
             dgvVehicle.TabIndex = 14;
+            dgvVehicle.CellContentClick += dgvVehicle_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(545, 30);
+            label1.Location = new Point(681, 38);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(56, 20);
+            label1.Size = new Size(66, 25);
             label1.TabIndex = 15;
             label1.Text = "Vehicle";
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(846, 445);
+            ClientSize = new Size(1058, 556);
             Controls.Add(label1);
             Controls.Add(dgvVehicle);
             Controls.Add(btnView);
@@ -231,7 +232,7 @@
             Controls.Add(txtPlate);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "MainMenu";
             Text = "MainMenu";
             Load += MainMenu_Load;
