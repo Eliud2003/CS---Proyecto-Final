@@ -29,7 +29,7 @@ namespace Proyecto___CS.View
 
         }
 
-        private void Load_Vehicle() 
+        private void Load_Vehicle()
         {
             try
             {
@@ -118,6 +118,11 @@ namespace Proyecto___CS.View
         private void btnView_Click(object sender, EventArgs e)
         {
             Load_Vehicle();
+        }
+
+        private void dgvVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
