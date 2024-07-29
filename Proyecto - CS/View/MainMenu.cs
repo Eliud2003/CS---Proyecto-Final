@@ -17,6 +17,7 @@ namespace Proyecto___CS.View
     {
         private readonly VehicleController _vehicleController;
         private int VehicleId;
+        ErrorProvider errorP = new ErrorProvider();
 
 
         public MainMenu(VehicleController vehicleController)
@@ -198,5 +199,24 @@ namespace Proyecto___CS.View
             var tt = new System.Windows.Forms.ToolTip();
             tt.SetToolTip(btnView, "View List");
         }
+        public void NoEmpty(System.Windows.Forms.TextBox txt)
+        {
+            if (ValidateInputData.TxtEmpty(txt))
+                errorP.SetError(txt, "No puede dejar el campo Vacio");
+            else errorP.Clear();
+        }
+
+
+        public void OnlyNumber(KeyPressEventArgs e, System.Windows.Forms.TextBox txt)
+        {
+            bool valida = ValidateInputData.OnlyNumber(e, txt);
+            if (!valida)
+                errorP.SetError(txt, "Al menos 3 numeros");
+            else
+                errorP.Clear();
+        }
+
+
+
     }
 }
