@@ -45,7 +45,7 @@ namespace Proyecto___CS.View
                 return false;
             }
         }
-        public static bool txtEmpty(TextBox txt)
+        public static bool TxtEmpty(TextBox txt)
         {
             if (txt.Text == string.Empty)
             {
