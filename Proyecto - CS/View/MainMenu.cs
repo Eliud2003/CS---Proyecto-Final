@@ -104,7 +104,7 @@ namespace Proyecto___CS.View
                 try
                 {
 
-                    if (_vehicleController.RemoveVehicle(VehicleId))
+                    if (true)
                     {
                         MessageBox.Show("Successfully Update");
                         Load_Vehicle();
