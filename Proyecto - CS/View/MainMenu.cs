@@ -97,8 +97,7 @@ namespace Proyecto___CS.View
             {
                 try
                 {
-                    //obj_chofer.IdCHF = indiceCHF;
-                    VehicleId = 5;//falta obtener el id del datagridview
+                   
                     if (_vehicleController.RemoveVehicle(VehicleId))
                     {
                         MessageBox.Show("Successfully Deleted");
