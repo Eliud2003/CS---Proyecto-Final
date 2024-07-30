@@ -65,9 +65,9 @@
             // 
             // txtTypeOfLicense
             // 
-            txtTypeOfLicense.Location = new Point(192, 251);
+            txtTypeOfLicense.Location = new Point(307, 150);
             txtTypeOfLicense.Name = "txtTypeOfLicense";
-            txtTypeOfLicense.Size = new Size(177, 31);
+            txtTypeOfLicense.Size = new Size(62, 31);
             txtTypeOfLicense.TabIndex = 46;
             // 
             // dgvDriver
@@ -142,11 +142,12 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(47, 257);
+            label8.Location = new Point(229, 156);
             label8.Name = "label8";
-            label8.Size = new Size(139, 25);
+            label8.Size = new Size(72, 25);
             label8.TabIndex = 39;
-            label8.Text = "Type Of Licence:";
+            label8.Text = "Licence:";
+            label8.Click += this.label8_Click;
             // 
             // label7
             // 
@@ -160,7 +161,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(222, 156);
+            label6.Location = new Point(47, 257);
             label6.Name = "label6";
             label6.Size = new Size(81, 25);
             label6.TabIndex = 37;
@@ -219,9 +220,9 @@
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(309, 150);
+            txtAddress.Location = new Point(154, 251);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(60, 31);
+            txtAddress.Size = new Size(215, 31);
             txtAddress.TabIndex = 30;
             // 
             // txtPhoneNumber
@@ -252,7 +253,7 @@
             txtFirstName.Size = new Size(215, 31);
             txtFirstName.TabIndex = 26;
             // 
-            // DriverForm2
+            // DriverForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -281,7 +282,7 @@
             Controls.Add(txtFirstName);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "DriverForm2";
+            Name = "DriverForm";
             Text = "DriverForm2";
             Load += DriverForm2_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDriver).EndInit();
