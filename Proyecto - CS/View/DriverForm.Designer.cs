@@ -93,6 +93,7 @@
             btnView.TabIndex = 44;
             btnView.UseVisualStyleBackColor = false;
             btnView.Click += btnView_Click;
+            btnView.MouseHover += btnView_MouseHover;
             // 
             // btnDelete
             // 
@@ -105,6 +106,7 @@
             btnDelete.TabIndex = 43;
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
+            btnDelete.MouseHover += btnDelete_MouseHover;
             // 
             // btnUpdate
             // 
@@ -117,6 +119,7 @@
             btnUpdate.TabIndex = 42;
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
+            btnUpdate.MouseHover += btnUpdate_MouseHover;
             // 
             // btnRegister
             // 
@@ -129,6 +132,7 @@
             btnRegister.TabIndex = 41;
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
+            btnRegister.MouseHover += btnRegister_MouseHover;
             // 
             // label1
             // 
@@ -146,7 +150,7 @@
             label8.Name = "label8";
             label8.Size = new Size(72, 25);
             label8.TabIndex = 39;
-            label8.Text = "Licence:";            
+            label8.Text = "Licence:";
             // 
             // label7
             // 

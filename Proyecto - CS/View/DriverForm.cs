@@ -26,7 +26,7 @@ namespace Proyecto___CS.View
             InitializeComponent();
 
             // cmbVehicle
-            cmbVehicle.DisplayMember = "Plate"; 
+            cmbVehicle.DisplayMember = "Plate";
             cmbVehicle.ValueMember = "VehicleId";
             cmbVehicle.DataSource = _vehicleController.GetAllVehicles();
         }
@@ -143,7 +143,7 @@ namespace Proyecto___CS.View
             }
 
             // Use the driver to add the Driver
-            bool success = _driverController.UpdateDriver(DriverId,firstName, lastName, dni, phoneNumber, address, typeOfLicense, birthDate, vehicle);
+            bool success = _driverController.UpdateDriver(DriverId, firstName, lastName, dni, phoneNumber, address, typeOfLicense, birthDate, vehicle);
 
             if (success)
             {
@@ -192,7 +192,31 @@ namespace Proyecto___CS.View
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            Load_Driver() ;
+            Load_Driver();
+        }
+
+        private void btnRegister_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnRegister, "Save");
+        }
+
+        private void btnUpdate_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnUpdate, "Update");
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnDelete, "Delete");
+        }
+
+        private void btnView_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new System.Windows.Forms.ToolTip();
+            tt.SetToolTip(btnView, "View List");
         }
     }
 }
