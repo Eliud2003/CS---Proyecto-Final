@@ -69,7 +69,7 @@ namespace Proyecto___CS.View
             DateTime manufacturingDate = dtpManufacturingDate.Value;
 
             // Validar los datos
-            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
+            if (txtFuelConsumption.Text == string.Empty || txtPlate.Text == string.Empty)
             {
                 MessageBox.Show("Please complete all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -147,7 +147,7 @@ namespace Proyecto___CS.View
                     btnDelete.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnView.Enabled = false;
-                    btnRegisterVehicle.Enabled = false;
+                    btnRegisterVehicle.Enabled = true;
                 }
                 catch (Exception ex)
                 {
