@@ -72,7 +72,7 @@ namespace Proyecto___CS.View
                 int SelectedRowIndex = dgvDriver.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvDriver.Rows[SelectedRowIndex];
                 // Take Data
-                DriverId = Convert.ToInt16(selectedRow.Cells["VehicleId"].Value.ToString());
+                DriverId = Convert.ToInt16(selectedRow.Cells["DriverId"].Value.ToString());
                 txtFirstName.Text = selectedRow.Cells["FirstName"].Value.ToString();
                 txtLastName.Text = selectedRow.Cells["LastName"].Value.ToString();
                 txtDni.Text = selectedRow.Cells["Dni"].Value.ToString();
