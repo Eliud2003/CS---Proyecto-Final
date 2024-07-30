@@ -80,7 +80,7 @@ namespace Proyecto___CS.View
                 txtAddress.Text = selectedRow.Cells["Address"].Value.ToString();
                 txtTypeOfLicense.Text = selectedRow.Cells["TypeOfLicense"].Value.ToString();
                 dtpBirthDate.Value = Convert.ToDateTime(selectedRow.Cells["BirthDate"].Value.ToString());
-                cmbVehicle.SelectedValue = selectedRow.Cells["Vehicle"].Value;
+                cmbVehicle.SelectedItem = selectedRow.Cells["Vehicle"].Value;
             }
             btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
