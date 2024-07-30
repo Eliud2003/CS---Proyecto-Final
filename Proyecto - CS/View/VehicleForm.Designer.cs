@@ -1,4 +1,5 @@
-﻿namespace Proyecto___CS.View
+﻿
+namespace Proyecto___CS.View
 {
     partial class VehicleForm
     {
@@ -55,6 +56,7 @@
             txtPlate.Name = "txtPlate";
             txtPlate.Size = new Size(220, 31);
             txtPlate.TabIndex = 0;
+            txtPlate.Leave += txtPlate_Leave;
             // 
             // txtModel
             // 
@@ -243,6 +245,11 @@
             ((System.ComponentModel.ISupportInitialize)dgvVehicle).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void txtPlate_Leave(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
