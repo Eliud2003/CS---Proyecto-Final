@@ -107,7 +107,7 @@ namespace Proyecto___CS.View
             }
 
             // Usar el controlador para agregar el vehículo
-            bool success = _vehicleController.AddVehicle(plate, model, mileage, fuelConsumption, manufacturingDate);
+            bool success = _vehicleController.UpdateVehicle(plate, model, mileage, fuelConsumption, manufacturingDate);
 
             if (success)
             {

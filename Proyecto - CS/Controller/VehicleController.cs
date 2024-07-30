@@ -44,7 +44,7 @@ namespace Proyecto___CS.Controller
             return _vehicleService.GetVehicleByPlate(plate);
         }
 
-        public bool UpdateDriver(string plate, string model, double mileage, double fuelConsumption, DateTime manufacturingDate)
+        public bool UpdateVehicle(string plate, string model, double mileage, double fuelConsumption, DateTime manufacturingDate)
         {
             var vehicle = new Vehicle
             {
