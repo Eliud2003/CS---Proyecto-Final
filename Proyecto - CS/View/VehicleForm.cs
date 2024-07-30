@@ -69,7 +69,7 @@ namespace Proyecto___CS.View
             DateTime manufacturingDate = dtpManufacturingDate.Value;
 
             // Validar los datos
-            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model) || double.IsNaN(fuelConsumption))
+            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
             {
                 MessageBox.Show("Please complete all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
