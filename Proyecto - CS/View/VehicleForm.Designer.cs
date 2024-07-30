@@ -201,11 +201,7 @@
             dgvVehicle.RowHeadersWidth = 62;
             dgvVehicle.Size = new Size(604, 479);
             dgvVehicle.TabIndex = 14;
-<<<<<<< HEAD:Proyecto - CS/View/MainMenu.Designer.cs
-            dgvVehicle.CellContentClick += dgvVehicle_CellContentClick;
-=======
             dgvVehicle.CellClick += dgvVehicle_CellClick;
->>>>>>> cc7b4713046cdaf191611556303d8e6f36fa8e9b:Proyecto - CS/View/VehicleForm.Designer.cs
             // 
             // label1
             // 
