@@ -81,5 +81,10 @@ namespace Proyecto___CS.View
         {
             OpenForm<DriverForm>();
         }
+
+        private void btnRoute_Click(object sender, EventArgs e)
+        {
+            OpenForm<RouteForm>();
+        }
     }
 }
