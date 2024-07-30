@@ -163,7 +163,7 @@ namespace Proyecto___CS.View
                     btnDelete.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnView.Enabled = false;
-                    btnRegisterVehicle.Enabled = false;
+                    btnRegisterVehicle.Enabled = true;
                 }
                 catch (Exception ex)
                 {

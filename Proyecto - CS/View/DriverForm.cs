@@ -168,7 +168,7 @@ namespace Proyecto___CS.View
                 try
                 {
 
-                    if (_vehicleController.RemoveVehicle(DriverId))
+                    if (_driverController.RemoveDriver(DriverId))
                     {
                         MessageBox.Show("Successfully Deleted");
                         Load_Driver();
@@ -181,7 +181,7 @@ namespace Proyecto___CS.View
                     btnDelete.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnView.Enabled = false;
-                    btnRegister.Enabled = false;
+                    btnRegister.Enabled = true;
                 }
                 catch (Exception ex)
                 {
