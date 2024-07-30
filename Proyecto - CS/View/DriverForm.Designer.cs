@@ -146,8 +146,7 @@
             label8.Name = "label8";
             label8.Size = new Size(72, 25);
             label8.TabIndex = 39;
-            label8.Text = "Licence:";
-            label8.Click += this.label8_Click;
+            label8.Text = "Licence:";            
             // 
             // label7
             // 
