@@ -125,9 +125,9 @@
             lblTravelDurationTime.Location = new Point(29, 178);
             lblTravelDurationTime.Margin = new Padding(2, 0, 2, 0);
             lblTravelDurationTime.Name = "lblTravelDurationTime";
-            lblTravelDurationTime.Size = new Size(183, 20);
+            lblTravelDurationTime.Size = new Size(188, 20);
             lblTravelDurationTime.TabIndex = 25;
-            lblTravelDurationTime.Text = "Travel Duration Time (H:S)";
+            lblTravelDurationTime.Text = "Travel Duration Time (H:m)";
             // 
             // lblDistance
             // 
@@ -135,9 +135,9 @@
             lblDistance.Location = new Point(29, 135);
             lblDistance.Margin = new Padding(2, 0, 2, 0);
             lblDistance.Name = "lblDistance";
-            lblDistance.Size = new Size(66, 20);
+            lblDistance.Size = new Size(100, 20);
             lblDistance.TabIndex = 24;
-            lblDistance.Text = "Distance";
+            lblDistance.Text = "Distance (km)";
             // 
             // lblDestination
             // 
@@ -188,8 +188,8 @@
             txtDistance.Name = "txtDistance";
             txtDistance.Size = new Size(170, 27);
             txtDistance.TabIndex = 18;
-            txtDistance.Leave += TxtDistance_Leave;
             txtDistance.KeyPress += TxtDistance_KeyPress;
+            txtDistance.Leave += TxtDistance_Leave;
             // 
             // txtDestination
             // 
@@ -216,8 +216,8 @@
             txtTravelPrice.Name = "txtTravelPrice";
             txtTravelPrice.Size = new Size(172, 27);
             txtTravelPrice.TabIndex = 32;
-            txtTravelPrice.Leave += TxtTravelPrice_Leave;
             txtTravelPrice.KeyPress += TxtTravelPrice_KeyPress;
+            txtTravelPrice.Leave += TxtTravelPrice_Leave;
             // 
             // RouteForm
             // 
@@ -242,7 +242,7 @@
             Controls.Add(txtOrigin);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "RouteForm";
             Text = "RouteForm";
             Load += RouteForm_Load;
