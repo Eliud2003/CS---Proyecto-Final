@@ -44,7 +44,7 @@
             txtDistance = new TextBox();
             txtDestination = new TextBox();
             txtOrigin = new TextBox();
-            textBox1 = new TextBox();
+            txtTravelPrice = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvRoute).BeginInit();
             SuspendLayout();
             // 
@@ -68,6 +68,7 @@
             dgvRoute.RowHeadersWidth = 62;
             dgvRoute.Size = new Size(604, 479);
             dgvRoute.TabIndex = 30;
+            dgvRoute.CellClick += dgvRoute_CellClick;
             // 
             // btnView
             // 
@@ -79,6 +80,8 @@
             btnView.Size = new Size(140, 79);
             btnView.TabIndex = 29;
             btnView.UseVisualStyleBackColor = false;
+            btnView.Click += btnView_Click;
+            btnView.MouseHover += btnView_MouseHover;
             // 
             // btnDelete
             // 
@@ -90,6 +93,8 @@
             btnDelete.Size = new Size(140, 79);
             btnDelete.TabIndex = 28;
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            btnDelete.MouseHover += btnDelete_MouseHover;
             // 
             // btnUpdate
             // 
@@ -101,6 +106,8 @@
             btnUpdate.Size = new Size(140, 80);
             btnUpdate.TabIndex = 27;
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            btnUpdate.MouseHover += btnUpdate_MouseHover;
             // 
             // lblTravelPrice
             // 
@@ -162,6 +169,8 @@
             btnRegisterVehicle.Size = new Size(140, 80);
             btnRegisterVehicle.TabIndex = 21;
             btnRegisterVehicle.UseVisualStyleBackColor = false;
+            btnRegisterVehicle.Click += btnRegisterVehicle_Click;
+            btnRegisterVehicle.MouseHover += btnRegisterVehicle_MouseHover;
             // 
             // txtTravelDurationTime
             // 
@@ -195,20 +204,20 @@
             txtOrigin.Size = new Size(212, 31);
             txtOrigin.TabIndex = 16;
             // 
-            // textBox1
+            // txtTravelPrice
             // 
-            textBox1.Location = new Point(158, 273);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 31);
-            textBox1.TabIndex = 32;
+            txtTravelPrice.Location = new Point(158, 273);
+            txtTravelPrice.Margin = new Padding(4, 5, 4, 5);
+            txtTravelPrice.Name = "txtTravelPrice";
+            txtTravelPrice.Size = new Size(214, 31);
+            txtTravelPrice.TabIndex = 32;
             // 
             // RouteForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 556);
-            Controls.Add(textBox1);
+            Controls.Add(txtTravelPrice);
             Controls.Add(lblRoute);
             Controls.Add(dgvRoute);
             Controls.Add(btnView);
@@ -228,6 +237,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RouteForm";
             Text = "RouteForm";
+            Load += RouteForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvRoute).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -250,6 +260,6 @@
         private TextBox txtDistance;
         private TextBox txtDestination;
         private TextBox txtOrigin;
-        private TextBox textBox1;
+        private TextBox txtTravelPrice;
     }
 }
