@@ -2,6 +2,7 @@
 using Proyecto___CS.Controller;
 using Proyecto___CS.View;
 using Microsoft.Extensions.DependencyInjection;
+using ConstruccionProyecto.Model.Entitys;
 
 namespace Proyecto___CS.View
 {
@@ -69,7 +70,13 @@ namespace Proyecto___CS.View
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MessageBoxButtons botones = MessageBoxButtons.YesNo;
+            DialogResult dr = MessageBox.Show("Are you sure you want to shut down the system?", "shut down"
+                , botones, MessageBoxIcon.Exclamation);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnVehicle_Click(object sender, EventArgs e)
