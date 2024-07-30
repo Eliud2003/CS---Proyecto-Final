@@ -65,6 +65,7 @@ namespace Proyecto___CS.View
             txtModel.Name = "txtModel";
             txtModel.Size = new Size(220, 31);
             txtModel.TabIndex = 1;
+            txtModel.Leave += TxtModel_Leave;
             // 
             // txtMileage
             // 
@@ -73,6 +74,8 @@ namespace Proyecto___CS.View
             txtMileage.Name = "txtMileage";
             txtMileage.Size = new Size(220, 31);
             txtMileage.TabIndex = 2;
+            txtMileage.Leave += TxtMileage_Leave;
+            txtMileage.KeyPress += TxtMileage_KeyPress;
             // 
             // txtFuelConsumption
             // 
@@ -81,6 +84,8 @@ namespace Proyecto___CS.View
             txtFuelConsumption.Name = "txtFuelConsumption";
             txtFuelConsumption.Size = new Size(142, 31);
             txtFuelConsumption.TabIndex = 3;
+            txtFuelConsumption.KeyPress += TxtFuelConsumption_KeyPress;
+            txtFuelConsumption.Leave += TxtFuelConsumption_Leave;
             // 
             // dtpManufacturingDate
             // 
@@ -247,9 +252,33 @@ namespace Proyecto___CS.View
             PerformLayout();
         }
 
+        private void TxtFuelConsumption_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtFuelConsumption);
+        }
+
+        private void TxtFuelConsumption_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyNumber(e, txtFuelConsumption);
+        }
+
+        private void TxtMileage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyNumber(e, txtMileage);
+        }
+
+        private void TxtMileage_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtMileage);
+        }
+
+        private void TxtModel_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtModel);
+        }
         private void txtPlate_Leave(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            NoEmpty(txtPlate);
         }
 
         #endregion

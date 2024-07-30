@@ -11,7 +11,7 @@ namespace Proyecto___CS.View
     {
         internal static bool OnlyNumber(KeyPressEventArgs e, TextBox txtnum)
         {
-            if (char.IsNumber(e.KeyChar) && txtnum.Text.Length < 3)
+            if (char.IsNumber(e.KeyChar) && txtnum.Text.Length < 10)
             {
                 e.Handled = false;
                 return true;
