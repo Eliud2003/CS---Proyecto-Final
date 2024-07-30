@@ -83,6 +83,7 @@ namespace Proyecto___CS.View
                 MessageBox.Show("Vehículo guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Limpiar los campos del formulario
                 CleanData();
+                Load_Vehicle();
             }
             else
             {
@@ -107,13 +108,15 @@ namespace Proyecto___CS.View
             }
 
             // Usar el controlador para agregar el vehículo
-            bool success = _vehicleController.UpdateVehicle(plate, model, mileage, fuelConsumption, manufacturingDate);
-
+            bool success = _vehicleController.UpdateVehicle(VehicleId, plate, model, mileage, fuelConsumption, manufacturingDate);
             if (success)
             {
                 MessageBox.Show("Vehículo actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Limpiar los campos del formulario
                 CleanData();
+                Load_Vehicle();
+
+
             }
             else
             {

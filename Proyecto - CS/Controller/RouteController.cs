@@ -35,17 +35,18 @@ namespace Proyecto___CS.Controller
             return _routeService.Read(id);
         }
 
-        public bool UpdateRoute(string origin, string destination, double distance, TimeSpan travelDurationTime, double travelPrice)
+        public bool UpdateRoute(int id, string origin, string destination, double distance, TimeSpan travelDurationTime, double travelPrice)
         {
             var route = new Route
             {
+                RouteId = id,
                 Origin = origin,
                 Destination = destination,
                 Distance = distance,
                 TravelDurationTime = travelDurationTime,
                 TravelPrice = travelPrice
             };
-            return _routeService.Update(route);
+            return _routeService.Update(id,route);
         }
 
         public bool RemoveRoute(int id)

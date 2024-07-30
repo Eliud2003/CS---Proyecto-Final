@@ -45,9 +45,15 @@ namespace Proyecto___CS.Service.Services
             return appDbContext.Set<T>().Find(id);
         }
 
-        public bool Update(T entity)
+        public bool Update(int id, T entity)
         {
-            appDbContext.Set<T>().Update(entity);
+            var existingEntity = appDbContext.Set<T>().Find(id);
+            if (existingEntity == null)
+            {
+                return false;
+            }
+
+            appDbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
             return appDbContext.SaveChanges() > 0;
         }
     }

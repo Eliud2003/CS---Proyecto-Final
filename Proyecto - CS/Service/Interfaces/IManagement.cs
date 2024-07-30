@@ -10,7 +10,7 @@ namespace Proyecto___CS.Service.Interfaces
     {
         bool Create(T entity);
         T Read(int id);
-        bool Update(T entity);
+        bool Update(int id,T entity);
         bool Delete(int id);
         List<T> GetList();
     }

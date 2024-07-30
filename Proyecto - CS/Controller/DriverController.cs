@@ -50,10 +50,11 @@ namespace Proyecto___CS.Controller
             return _driverService.GetDriverByName(name);
         }
 
-        public bool UpdateDriver(string firstName, string lastName, string dni, string phoneNumber, string address, string typeOfLicense, DateTime birthDate, int vehicleId)
+        public bool UpdateDriver(int id,string firstName, string lastName, string dni, string phoneNumber, string address, string typeOfLicense, DateTime birthDate, int vehicleId)
         {
             var driver = new Driver
             {
+                DriverId = id,
                 FirstName = firstName,
                 LastName = lastName,
                 Dni = dni,
@@ -63,7 +64,7 @@ namespace Proyecto___CS.Controller
                 BirthDate = birthDate,
                 VehicleId = vehicleId
             };
-            return _managementService.Update(driver);
+            return _managementService.Update(id,driver);
         }
 
         public bool RemoveDriver(int id)
