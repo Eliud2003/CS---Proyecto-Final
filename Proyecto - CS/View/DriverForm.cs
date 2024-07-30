@@ -10,7 +10,6 @@ namespace Proyecto___CS.View
     public class DriverForm : Form
     {
         private readonly DriverController _driverController;
-        private Label lblDriverId;
         private Label lblFirstName;
         private Label lblLastName;
         private Label label4;
@@ -18,25 +17,25 @@ namespace Proyecto___CS.View
         private Label label6;
         private Label label7;
         private Label label8;
-        private DataGridView dgvDriver;
         private Label label1;
+        private DataGridView dgvVehicle;
         private Button btnView;
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnRegisterVehicle;
+        private TextBox txtTypeOfLicense;
+        private Label label2;
         private readonly VehicleController _vehicleController;
 
         private void InitializeComponent()
         {
             txtFirstName = new TextBox();
             txtLastName = new TextBox();
-            txtDNI = new TextBox();
+            txtDni = new TextBox();
             txtPhoneNumber = new TextBox();
-            txtAdress = new TextBox();
-            txtTypeOfLicense = new TextBox();
-            dtpBirth = new DateTimePicker();
+            txtAddress = new TextBox();
+            dtpBirthDate = new DateTimePicker();
             cmbVehicle = new ComboBox();
-            lblDriverId = new Label();
             lblFirstName = new Label();
             lblLastName = new Label();
             label4 = new Label();
@@ -44,94 +43,81 @@ namespace Proyecto___CS.View
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            dgvDriver = new DataGridView();
             label1 = new Label();
+            dgvVehicle = new DataGridView();
             btnView = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
             btnRegisterVehicle = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvDriver).BeginInit();
+            txtTypeOfLicense = new TextBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvVehicle).BeginInit();
             SuspendLayout();
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(139, 19);
+            txtFirstName.Location = new Point(153, 54);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(100, 31);
-            txtFirstName.TabIndex = 0;
+            txtFirstName.Size = new Size(215, 31);
+            txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(171, 62);
+            txtLastName.Location = new Point(153, 104);
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(168, 31);
-            txtLastName.TabIndex = 1;
+            txtLastName.Size = new Size(215, 31);
+            txtLastName.TabIndex = 2;
             // 
-            // txtDNI
+            // txtDni
             // 
-            txtDNI.Location = new Point(485, 62);
-            txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(168, 31);
-            txtDNI.TabIndex = 2;
+            txtDni.Location = new Point(99, 155);
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(104, 31);
+            txtDni.TabIndex = 3;
             // 
             // txtPhoneNumber
             // 
-            txtPhoneNumber.Location = new Point(139, 111);
+            txtPhoneNumber.Location = new Point(191, 205);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(200, 31);
-            txtPhoneNumber.TabIndex = 3;
+            txtPhoneNumber.Size = new Size(177, 31);
+            txtPhoneNumber.TabIndex = 4;
             // 
-            // txtAdress
+            // txtAddress
             // 
-            txtAdress.Location = new Point(488, 105);
-            txtAdress.Name = "txtAdress";
-            txtAdress.Size = new Size(168, 31);
-            txtAdress.TabIndex = 4;
+            txtAddress.Location = new Point(308, 155);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(60, 31);
+            txtAddress.TabIndex = 5;
             // 
-            // txtTypeOfLicense
+            // dtpBirthDate
             // 
-            txtTypeOfLicense.Location = new Point(139, 165);
-            txtTypeOfLicense.Name = "txtTypeOfLicense";
-            txtTypeOfLicense.Size = new Size(200, 31);
-            txtTypeOfLicense.TabIndex = 5;
-            // 
-            // dtpBirth
-            // 
-            dtpBirth.Location = new Point(453, 160);
-            dtpBirth.Name = "dtpBirth";
-            dtpBirth.Size = new Size(200, 31);
-            dtpBirth.TabIndex = 6;
+            dtpBirthDate.Location = new Point(153, 364);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new Size(215, 31);
+            dtpBirthDate.TabIndex = 6;
             // 
             // cmbVehicle
             // 
             cmbVehicle.FormattingEnabled = true;
-            cmbVehicle.Location = new Point(190, 221);
+            cmbVehicle.Location = new Point(153, 309);
             cmbVehicle.Name = "cmbVehicle";
-            cmbVehicle.Size = new Size(149, 33);
+            cmbVehicle.Size = new Size(215, 33);
             cmbVehicle.TabIndex = 7;
-            // 
-            // lblDriverId
-            // 
-            lblDriverId.AutoSize = true;
-            lblDriverId.Location = new Point(42, 22);
-            lblDriverId.Name = "lblDriverId";
-            lblDriverId.Size = new Size(86, 25);
-            lblDriverId.TabIndex = 9;
-            lblDriverId.Text = "Driver ID:";
             // 
             // lblFirstName
             // 
             lblFirstName.AutoSize = true;
-            lblFirstName.Location = new Point(45, 62);
+            lblFirstName.Location = new Point(46, 60);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new Size(101, 25);
             lblFirstName.TabIndex = 10;
             lblFirstName.Text = "First Name:";
+            lblFirstName.Click += lblFirstName_Click;
             // 
             // lblLastName
             // 
             lblLastName.AutoSize = true;
-            lblLastName.Location = new Point(359, 62);
+            lblLastName.Location = new Point(46, 110);
             lblLastName.Name = "lblLastName";
             lblLastName.Size = new Size(99, 25);
             lblLastName.TabIndex = 11;
@@ -140,7 +126,7 @@ namespace Proyecto___CS.View
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(42, 117);
+            label4.Location = new Point(46, 161);
             label4.Name = "label4";
             label4.Size = new Size(47, 25);
             label4.TabIndex = 12;
@@ -149,7 +135,7 @@ namespace Proyecto___CS.View
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(359, 111);
+            label5.Location = new Point(46, 211);
             label5.Name = "label5";
             label5.Size = new Size(136, 25);
             label5.TabIndex = 13;
@@ -158,16 +144,17 @@ namespace Proyecto___CS.View
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(45, 165);
+            label6.Location = new Point(221, 161);
             label6.Name = "label6";
             label6.Size = new Size(81, 25);
             label6.TabIndex = 14;
             label6.Text = "Address:";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(359, 166);
+            label7.Location = new Point(46, 370);
             label7.Name = "label7";
             label7.Size = new Size(94, 25);
             label7.TabIndex = 15;
@@ -176,36 +163,37 @@ namespace Proyecto___CS.View
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(45, 224);
+            label8.Location = new Point(46, 262);
             label8.Name = "label8";
             label8.Size = new Size(139, 25);
             label8.TabIndex = 16;
             label8.Text = "Type Of Licence:";
             // 
-            // dgvDriver
-            // 
-            dgvDriver.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDriver.Location = new Point(686, 62);
-            dgvDriver.Name = "dgvDriver";
-            dgvDriver.RowHeadersWidth = 62;
-            dgvDriver.Size = new Size(322, 399);
-            dgvDriver.TabIndex = 17;
-            dgvDriver.CellContentClick += dgvDriver_CellContentClick;
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(812, 22);
+            label1.Location = new Point(704, 27);
             label1.Name = "label1";
             label1.Size = new Size(59, 25);
             label1.TabIndex = 18;
             label1.Text = "Driver";
             // 
+            // dgvVehicle
+            // 
+            dgvVehicle.BackgroundColor = SystemColors.ButtonFace;
+            dgvVehicle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVehicle.Location = new Point(407, 54);
+            dgvVehicle.Margin = new Padding(2);
+            dgvVehicle.Name = "dgvVehicle";
+            dgvVehicle.RowHeadersWidth = 62;
+            dgvVehicle.Size = new Size(629, 531);
+            dgvVehicle.TabIndex = 23;
+            // 
             // btnView
             // 
-            btnView.BackColor = SystemColors.ButtonShadow;
+            btnView.BackColor = SystemColors.ButtonFace;
             btnView.Image = Properties.Resources.view;
-            btnView.Location = new Point(239, 395);
+            btnView.Location = new Point(239, 506);
             btnView.Margin = new Padding(4, 5, 4, 5);
             btnView.Name = "btnView";
             btnView.Size = new Size(140, 79);
@@ -214,9 +202,9 @@ namespace Proyecto___CS.View
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.BackColor = SystemColors.ButtonFace;
             btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(63, 395);
+            btnDelete.Location = new Point(63, 506);
             btnDelete.Margin = new Padding(4, 5, 4, 5);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(140, 79);
@@ -225,9 +213,9 @@ namespace Proyecto___CS.View
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = SystemColors.Info;
+            btnUpdate.BackColor = SystemColors.ButtonFace;
             btnUpdate.Image = Properties.Resources.Update;
-            btnUpdate.Location = new Point(239, 292);
+            btnUpdate.Location = new Point(239, 416);
             btnUpdate.Margin = new Padding(4, 5, 4, 5);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(140, 80);
@@ -236,24 +224,42 @@ namespace Proyecto___CS.View
             // 
             // btnRegisterVehicle
             // 
-            btnRegisterVehicle.BackColor = Color.FromArgb(192, 255, 192);
+            btnRegisterVehicle.BackColor = SystemColors.ButtonFace;
             btnRegisterVehicle.Image = Properties.Resources.save;
-            btnRegisterVehicle.Location = new Point(63, 292);
+            btnRegisterVehicle.Location = new Point(63, 416);
             btnRegisterVehicle.Margin = new Padding(4, 5, 4, 5);
             btnRegisterVehicle.Name = "btnRegisterVehicle";
             btnRegisterVehicle.Size = new Size(140, 80);
             btnRegisterVehicle.TabIndex = 19;
             btnRegisterVehicle.UseVisualStyleBackColor = false;
             // 
+            // txtTypeOfLicense
+            // 
+            txtTypeOfLicense.Location = new Point(191, 256);
+            txtTypeOfLicense.Name = "txtTypeOfLicense";
+            txtTypeOfLicense.Size = new Size(177, 31);
+            txtTypeOfLicense.TabIndex = 24;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(46, 317);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 25);
+            label2.TabIndex = 25;
+            label2.Text = "Vehicle:";
+            // 
             // DriverForm
             // 
-            ClientSize = new Size(1058, 556);
+            ClientSize = new Size(1080, 612);
+            Controls.Add(label2);
+            Controls.Add(txtTypeOfLicense);
+            Controls.Add(dgvVehicle);
             Controls.Add(btnView);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnRegisterVehicle);
             Controls.Add(label1);
-            Controls.Add(dgvDriver);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -261,19 +267,17 @@ namespace Proyecto___CS.View
             Controls.Add(label4);
             Controls.Add(lblLastName);
             Controls.Add(lblFirstName);
-            Controls.Add(lblDriverId);
             Controls.Add(cmbVehicle);
-            Controls.Add(dtpBirth);
-            Controls.Add(txtTypeOfLicense);
-            Controls.Add(txtAdress);
+            Controls.Add(dtpBirthDate);
+            Controls.Add(txtAddress);
             Controls.Add(txtPhoneNumber);
-            Controls.Add(txtDNI);
+            Controls.Add(txtDni);
             Controls.Add(txtLastName);
             Controls.Add(txtFirstName);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DriverForm";
             Load += DriverForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvDriver).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVehicle).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,14 +289,12 @@ namespace Proyecto___CS.View
             InitializeComponent();
             LoadVehicles();
         }
-
         private TextBox txtFirstName;
         private TextBox txtLastName;
-        private TextBox txtDNI;
+        private TextBox txtDni;
         private TextBox txtPhoneNumber;
-        private TextBox txtAdress;
-        private TextBox txtTypeOfLicense;
-        private DateTimePicker dtpBirth;
+        private TextBox txtAddress;
+        private DateTimePicker dtpBirthDate;
         private ComboBox cmbVehicle;
 
         private void LoadVehicles()
@@ -312,12 +314,12 @@ namespace Proyecto___CS.View
         private void btnRegisterDriver_Click(object sender, EventArgs e)
         {
             var firstName = txtFirstName.Text;
-            var lastName = txtLastName.Text;
-            var dni = txtDNI.Text;
-            var phoneNumber = txtPhoneNumber.Text;
-            var address = txtAdress.Text;
-            var typeOfLicense = txtTypeOfLicense.Text;
-            var birthDate = dtpBirth.Value;
+            var lastName = txtFirstName.Text;
+            var dni = txtLastName.Text;
+            var phoneNumber = txtDni.Text;
+            var address = txtPhoneNumber.Text;
+            var typeOfLicense = txtAddress.Text;
+            var birthDate = dtpBirthDate.Value;
             var vehicleId = (int)cmbVehicle.SelectedValue;
 
             var result = _driverController.AddDriver(firstName, lastName, dni, phoneNumber, address, typeOfLicense, birthDate, vehicleId);
@@ -333,6 +335,16 @@ namespace Proyecto___CS.View
         }
 
         private void dgvDriver_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFirstName_Click(object sender, EventArgs e)
         {
 
         }

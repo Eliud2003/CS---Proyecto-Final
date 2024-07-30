@@ -217,7 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1058, 556);
+            ClientSize = new Size(1080, 612);
             Controls.Add(label1);
             Controls.Add(dgvVehicle);
             Controls.Add(btnView);
