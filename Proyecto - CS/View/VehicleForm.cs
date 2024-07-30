@@ -222,8 +222,5 @@ namespace Proyecto___CS.View
             else
                 errorP.Clear();
         }
-
-
-
     }
 }
