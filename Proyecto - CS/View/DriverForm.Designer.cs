@@ -227,6 +227,7 @@
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(215, 31);
             txtAddress.TabIndex = 30;
+            txtAddress.Leave += TxtAddress_Leave;
             // 
             // txtPhoneNumber
             // 
@@ -234,6 +235,8 @@
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new Size(177, 31);
             txtPhoneNumber.TabIndex = 29;
+            txtPhoneNumber.Leave += TxtPhoneNumber_Leave;
+            txtPhoneNumber.KeyPress += TxtPhoneNumber_KeyPress;
             // 
             // txtDni
             // 
@@ -241,6 +244,8 @@
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(104, 31);
             txtDni.TabIndex = 28;
+            txtDni.Leave += TxtDni_Leave;
+            txtDni.KeyPress += TxtDni_KeyPress;
             // 
             // txtLastName
             // 
@@ -248,6 +253,8 @@
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(215, 31);
             txtLastName.TabIndex = 27;
+            txtLastName.Leave += TxtLastName_Leave;
+            txtLastName.KeyPress += TxtLastName_KeyPress;
             // 
             // txtFirstName
             // 
@@ -255,6 +262,8 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(215, 31);
             txtFirstName.TabIndex = 26;
+            txtFirstName.Leave += TxtFirstName_Leave;
+            txtFirstName.KeyPress += TxtFirstName_KeyPress;
             // 
             // DriverForm
             // 
@@ -291,6 +300,51 @@
             ((System.ComponentModel.ISupportInitialize)dgvDriver).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void TxtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyNumber(e,txtPhoneNumber);
+        }
+
+        private void TxtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyNumber(e,txtDni);
+        }
+
+        private void TxtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyLetters1(e,txtLastName);
+        }
+
+        private void TxtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyLetters1(e,txtFirstName);
+        }
+
+        private void TxtFirstName_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtFirstName);
+        }
+
+        private void TxtLastName_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtLastName);
+        }
+
+        private void TxtDni_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtDni);
+        }
+
+        private void TxtPhoneNumber_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtPhoneNumber);
+        }
+
+        private void TxtAddress_Leave(object sender, EventArgs e)
+        {
+            NoEmpty(txtAddress);
         }
 
         #endregion

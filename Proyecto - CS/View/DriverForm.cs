@@ -218,5 +218,28 @@ namespace Proyecto___CS.View
             var tt = new System.Windows.Forms.ToolTip();
             tt.SetToolTip(btnView, "View List");
         }
+        public void NoEmpty(System.Windows.Forms.TextBox txt)
+        {
+            if (ValidateInputData.TxtEmpty(txt))
+                errorP.SetError(txt, "You can't leave it empty");
+            else errorP.Clear();
+        }
+        public void OnlyNumber(KeyPressEventArgs e, System.Windows.Forms.TextBox txt)
+        {
+            bool valida = ValidateInputData.OnlyNumber(e, txt);
+            if (!valida)
+                errorP.SetError(txt, "Max 10 numbers");
+            else
+                errorP.Clear();
+        }
+        public void OnlyLetters1(KeyPressEventArgs e, TextBox txt)
+        {
+            bool valida = ValidateInputData.Onlyletters(e);
+            if (!valida)
+                errorP.SetError(txt, "Solo SoloLetras");
+            else
+                errorP.Clear();
+        }
+        
     }
 }
