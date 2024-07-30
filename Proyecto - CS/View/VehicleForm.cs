@@ -71,7 +71,7 @@ namespace Proyecto___CS.View
             // Validar los datos
             if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
             {
-                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please complete all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -80,14 +80,14 @@ namespace Proyecto___CS.View
 
             if (success)
             {
-                MessageBox.Show("Vehículo guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vehicle saving successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Limpiar los campos del formulario
                 CleanData();
                 Load_Vehicle();
             }
             else
             {
-                MessageBox.Show("Error al guardar el vehículo. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error saving vehicle. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -103,15 +103,15 @@ namespace Proyecto___CS.View
             // Validar los datos
             if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
             {
-                MessageBox.Show("Por favor, complete todos los campos requeridos para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please complete all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Usar el controlador para agregar el vehículo
+            // Usar el controlador para actualizar el vehículo
             bool success = _vehicleController.UpdateVehicle(VehicleId, plate, model, mileage, fuelConsumption, manufacturingDate);
             if (success)
             {
-                MessageBox.Show("Vehículo actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vehicle update successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Limpiar los campos del formulario
                 CleanData();
                 Load_Vehicle();
@@ -120,7 +120,7 @@ namespace Proyecto___CS.View
             }
             else
             {
-                MessageBox.Show("Error al actualizar el vehículo. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error update vehicle. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
