@@ -1,6 +1,6 @@
 ﻿namespace Proyecto___CS.View
 {
-    partial class DriverForm2
+    partial class DriverForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DriverForm2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DriverForm));
             label2 = new Label();
             txtTypeOfLicense = new TextBox();
             dgvDriver = new DataGridView();

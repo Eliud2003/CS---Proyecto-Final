@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Proyecto___CS.View
 {
-    public partial class DriverForm2 : Form
+    public partial class DriverForm : Form
     {
         private readonly DriverController _driverController;
         private readonly VehicleController _vehicleController;
         private int DriverId;
         ErrorProvider errorP = new ErrorProvider();
 
-        public DriverForm2(DriverController driverController, VehicleController vehicleController)
+        public DriverForm(DriverController driverController, VehicleController vehicleController)
         {
             _driverController = driverController;
             _vehicleController = vehicleController;
