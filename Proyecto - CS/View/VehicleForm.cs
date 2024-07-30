@@ -74,11 +74,6 @@ namespace Proyecto___CS.View
                 MessageBox.Show("Por favor, complete todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
-                btnRegisterVehicle.Enabled=true;
-
-
-
 
             // Usar el controlador para agregar el vehículo
             bool success = _vehicleController.AddVehicle(plate, model, mileage, fuelConsumption, manufacturingDate);
@@ -97,32 +92,32 @@ namespace Proyecto___CS.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons botones = MessageBoxButtons.YesNo;
-            DialogResult dr = MessageBox.Show("Are you sure you want to update this item?", "Update"
-                , botones, MessageBoxIcon.Exclamation);
-            if (dr == DialogResult.Yes)
+            // Obtener los datos de los controles del formulario
+            string plate = txtPlate.Text;
+            string model = txtModel.Text;
+            double mileage = Convert.ToDouble(txtMileage.Text);
+            double fuelConsumption = double.Parse(txtFuelConsumption.Text);
+            DateTime manufacturingDate = dtpManufacturingDate.Value;
+
+            // Validar los datos
+            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
             {
-                try
-                {
+                MessageBox.Show("Por favor, complete todos los campos requeridos para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                    if (true)
-                    {
-                        MessageBox.Show("Successfully Update");
-                        Load_Vehicle();
-                        CleanData();
-                    }
-                    else
-                        MessageBox.Show("Could Not Update");
+            // Usar el controlador para agregar el vehículo
+            bool success = _vehicleController.AddVehicle(plate, model, mileage, fuelConsumption, manufacturingDate);
 
-                    btnDelete.Enabled = false;
-                    btnUpdate.Enabled = false;
-                    btnView.Enabled = false;
-                    btnRegisterVehicle.Enabled = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            if (success)
+            {
+                MessageBox.Show("Vehículo guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Limpiar los campos del formulario
+                CleanData();
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar el vehículo. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
