@@ -65,11 +65,11 @@ namespace Proyecto___CS.View
             string plate = txtPlate.Text;
             string model = txtModel.Text;
             double mileage = Convert.ToDouble(txtMileage.Text);
-            double fuelConsumption = double.Parse(txtFuelConsumption.Text);
+            double fuelConsumption = Convert.ToDouble(txtFuelConsumption.Text);
             DateTime manufacturingDate = dtpManufacturingDate.Value;
 
             // Validar los datos
-            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model))
+            if (string.IsNullOrEmpty(plate) || string.IsNullOrEmpty(model) || double.IsNaN(fuelConsumption))
             {
                 MessageBox.Show("Please complete all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
