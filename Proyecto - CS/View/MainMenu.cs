@@ -30,7 +30,7 @@ namespace Proyecto___CS.View
         private void MainMenu_Load(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;
-            btnRegisterVehicle.Enabled = false;
+            btnRegisterVehicle.Enabled = true;
             btnUpdate.Enabled = false;
             btnView.Enabled = true;
 
