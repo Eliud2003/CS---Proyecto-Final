@@ -1,6 +1,6 @@
 ﻿namespace Proyecto___CS.View
 {
-    partial class MainMenu
+    partial class VehicleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleForm));
             txtPlate = new TextBox();
             txtModel = new TextBox();
             txtMileage = new TextBox();

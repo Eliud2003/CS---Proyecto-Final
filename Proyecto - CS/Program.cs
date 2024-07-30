@@ -64,7 +64,7 @@ namespace Proyecto___CS
                     services.AddTransient<VehicleController>();
 
                     // Registrar formularios
-                    services.AddTransient<MainMenu>();
+                    services.AddTransient<VehicleForm>();
                     services.AddTransient<DriverForm>();
                     services.AddTransient<GeneralForm>();
                 });
