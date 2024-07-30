@@ -61,12 +61,12 @@ namespace Proyecto___CS.View
                 int SelectedRowIndex = dgvRoute.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvRoute.Rows[SelectedRowIndex];
                 // Take Data
-                RouteId = Convert.ToInt16(selectedRow.Cells["VehicleId"].Value.ToString());
-                txtOrigin.Text = selectedRow.Cells["Plate"].Value.ToString();
-                txtDestination.Text = selectedRow.Cells["Model"].Value.ToString();
-                txtDistance.Text = selectedRow.Cells["Mileage"].Value.ToString();
-                txtTravelDurationTime.Text = selectedRow.Cells["FuelConsumption"].Value.ToString();
-                txtTravelPrice.Text = selectedRow.Cells["ManufacturingDate"].Value.ToString();
+                RouteId = Convert.ToInt16(selectedRow.Cells["RouteId"].Value.ToString());
+                txtOrigin.Text = selectedRow.Cells["Origin"].Value.ToString();
+                txtDestination.Text = selectedRow.Cells["Destination"].Value.ToString();
+                txtDistance.Text = selectedRow.Cells["Distance"].Value.ToString();
+                txtTravelDurationTime.Text = selectedRow.Cells["TravelDurationTime"].Value.ToString();
+                txtTravelPrice.Text = selectedRow.Cells["TravelPrice"].Value.ToString();
             }
             btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
