@@ -67,6 +67,7 @@ namespace Proyecto___CS
                     services.AddTransient<VehicleForm>();
                     services.AddTransient<DriverForm>();
                     services.AddTransient<GeneralForm>();
+                    services.AddTransient<RouteForm>();
                 });
     }
 }

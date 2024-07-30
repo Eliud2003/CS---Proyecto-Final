@@ -66,7 +66,7 @@
             dgvRoute.Margin = new Padding(2);
             dgvRoute.Name = "dgvRoute";
             dgvRoute.RowHeadersWidth = 62;
-            dgvRoute.Size = new Size(604, 479);
+            dgvRoute.Size = new Size(628, 479);
             dgvRoute.TabIndex = 30;
             dgvRoute.CellClick += dgvRoute_CellClick;
             // 
