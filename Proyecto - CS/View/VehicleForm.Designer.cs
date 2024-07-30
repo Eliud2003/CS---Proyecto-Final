@@ -1,6 +1,6 @@
 ﻿namespace Proyecto___CS.View
 {
-    partial class MainMenu
+    partial class VehicleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleForm));
             txtPlate = new TextBox();
             txtModel = new TextBox();
             txtMileage = new TextBox();
@@ -91,7 +91,7 @@
             // 
             // btnRegisterVehicle
             // 
-            btnRegisterVehicle.BackColor = Color.FromArgb(192, 255, 192);
+            btnRegisterVehicle.BackColor = SystemColors.ButtonFace;
             btnRegisterVehicle.Image = Properties.Resources.save;
             btnRegisterVehicle.Location = new Point(56, 362);
             btnRegisterVehicle.Margin = new Padding(4, 5, 4, 5);
@@ -100,6 +100,7 @@
             btnRegisterVehicle.TabIndex = 5;
             btnRegisterVehicle.UseVisualStyleBackColor = false;
             btnRegisterVehicle.Click += btnRegisterVehicle_Click;
+            btnRegisterVehicle.MouseHover += btnRegisterVehicle_MouseHover;
             // 
             // lblPlate
             // 
@@ -153,7 +154,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = SystemColors.Info;
+            btnUpdate.BackColor = SystemColors.ButtonFace;
             btnUpdate.Image = Properties.Resources.Update;
             btnUpdate.Location = new Point(232, 362);
             btnUpdate.Margin = new Padding(4, 5, 4, 5);
@@ -162,10 +163,11 @@
             btnUpdate.TabIndex = 11;
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
+            btnUpdate.MouseHover += btnUpdate_MouseHover;
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.BackColor = SystemColors.ButtonFace;
             btnDelete.Image = Properties.Resources.delete;
             btnDelete.Location = new Point(56, 465);
             btnDelete.Margin = new Padding(4, 5, 4, 5);
@@ -174,10 +176,11 @@
             btnDelete.TabIndex = 12;
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
+            btnDelete.MouseHover += btnDelete_MouseHover;
             // 
             // btnView
             // 
-            btnView.BackColor = SystemColors.ButtonShadow;
+            btnView.BackColor = SystemColors.ButtonFace;
             btnView.Image = Properties.Resources.view;
             btnView.Location = new Point(232, 465);
             btnView.Margin = new Padding(4, 5, 4, 5);
@@ -186,6 +189,7 @@
             btnView.TabIndex = 13;
             btnView.UseVisualStyleBackColor = false;
             btnView.Click += btnView_Click;
+            btnView.MouseHover += btnView_MouseHover;
             // 
             // dgvVehicle
             // 
@@ -197,7 +201,11 @@
             dgvVehicle.RowHeadersWidth = 62;
             dgvVehicle.Size = new Size(604, 479);
             dgvVehicle.TabIndex = 14;
+<<<<<<< HEAD:Proyecto - CS/View/MainMenu.Designer.cs
             dgvVehicle.CellContentClick += dgvVehicle_CellContentClick;
+=======
+            dgvVehicle.CellClick += dgvVehicle_CellClick;
+>>>>>>> cc7b4713046cdaf191611556303d8e6f36fa8e9b:Proyecto - CS/View/VehicleForm.Designer.cs
             // 
             // label1
             // 

@@ -13,14 +13,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto___CS.View
 {
-    public partial class MainMenu : Form
+    public partial class VehicleForm : Form
     {
         private readonly VehicleController _vehicleController;
         private int VehicleId;
         ErrorProvider errorP = new ErrorProvider();
 
 
-        public MainMenu(VehicleController vehicleController)
+        public VehicleForm(VehicleController vehicleController)
         {
             _vehicleController = vehicleController;
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace Proyecto___CS.View
         private void MainMenu_Load(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;
-            btnRegisterVehicle.Enabled = true;
+            btnRegisterVehicle.Enabled = false;
             btnUpdate.Enabled = false;
             btnView.Enabled = true;
 
@@ -163,12 +163,6 @@ namespace Proyecto___CS.View
             Load_Vehicle();
         }
 
-<<<<<<< HEAD
-        private void dgvVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-=======
         private void dgvVehicle_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvVehicle.SelectedCells.Count > 0)
@@ -231,6 +225,5 @@ namespace Proyecto___CS.View
 
 
 
->>>>>>> cc7b4713046cdaf191611556303d8e6f36fa8e9b
     }
 }

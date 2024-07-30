@@ -74,7 +74,7 @@ namespace Proyecto___CS.View
 
         private void btnVehicle_Click(object sender, EventArgs e)
         {
-            OpenForm<MainMenu>();
+            OpenForm<VehicleForm>();
         }
 
         private void btnDriver_Click(object sender, EventArgs e)
